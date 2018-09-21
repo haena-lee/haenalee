@@ -147,6 +147,11 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+/** 
+* Custom Post Types(CPTs).
+*/
+require get_template_directory() . '/inc/custom-post-types.php';
+
 /**
  * Customizer additions.
  */

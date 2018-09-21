@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom template tags for this theme
+ * Custom template tags and taxonnomies for this theme
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
@@ -146,3 +146,37 @@ if ( ! function_exists( 'haenalee_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+
+// Taxonomy 
+function haenalee_register_taxonomies() {
+    // Add tools taxonomy
+    $labels = array(
+        'name'              => _x( 'Tools Used', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Tool Used', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Tools Used' ),
+        'all_items'         => __( 'All Tools Used' ),
+        'parent_item'       => __( 'Parent Tools Used' ),
+        'parent_item_colon' => __( 'Parent Tools Used:' ),
+        'edit_item'         => __( 'Edit Tools Used' ),
+        'view_item'         => __( 'View Tools Used' ),
+        'update_item'       => __( 'Update Tools Used' ),
+        'add_new_item'      => __( 'Add New Tool Used' ),
+        'new_item_name'     => __( 'New Tool Used Name' ),
+        'menu_name'         => __( 'Tools Used' ),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_menu'      => true,
+        'show_in_nav_menu'  => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'tools-used' ),
+    ); // inside the array, put the post type that taxonomy will apply to
+	register_taxonomy( 'tools-used', array( 'work' ), $args );
+
+ }
+ add_action( 'init', 'haenalee_register_taxonomies');
+
