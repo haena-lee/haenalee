@@ -122,6 +122,8 @@ add_action( 'widgets_init', 'haenalee_widgets_init' );
 function haenalee_scripts() {
 	wp_enqueue_style( 'haenalee-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'haenalee-typekit', 'https://use.typekit.net/zop0avq.css' );
+
 	wp_enqueue_script( 'haenalee-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'haenalee-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

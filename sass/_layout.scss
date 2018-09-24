@@ -1,5 +1,13 @@
+// main site layout
+
 .site {
     width: 100%;
     min-height: 100vh;
     background-color: $color__background-body;
+}
+
+// header
+
+.site-title h1 a {
+    font-family: $font__button;
 }
