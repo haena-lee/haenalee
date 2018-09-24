@@ -136,24 +136,6 @@ body, button, input, select, optgroup, textarea { color: #404040; font-family: s
 
 h1, h2, h3, h4, h5, h6 { clear: both; }
 
-p { margin-bottom: 1.5em; }
-
-dfn, cite, em, i { font-style: italic; }
-
-blockquote { margin: 0 1.5em; }
-
-address { margin: 0 0 1.5em; }
-
-pre { background: #eee; font-family: "Courier 10 Pitch", Courier, monospace; font-size: 15px; font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.6em; max-width: 100%; overflow: auto; padding: 1.6em; }
-
-code, kbd, tt, var { font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; font-size: 15px; font-size: 0.9375rem; }
-
-abbr, acronym { border-bottom: 1px dotted #666; cursor: help; }
-
-mark, ins { background: #fff9c0; text-decoration: none; }
-
-big { font-size: 125%; }
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -161,7 +143,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 *, *:before, *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */ -webkit-box-sizing: inherit; box-sizing: inherit; }
 
-body { background: #fff; /* Fallback for when there is no custom background color defined. */ }
+body { background: whitesmoke; /* Fallback for when there is no custom background color defined. */ }
 
 hr { background-color: #ccc; border: 0; height: 1px; margin-bottom: 1.5em; }
 
@@ -201,10 +183,12 @@ select { border: 1px solid #ccc; }
 textarea { width: 100%; }
 
 /*--------------------------------------------------------------
-# Navigation
+# Layout
 --------------------------------------------------------------*/
+.site { width: 100%; min-height: 100vh; background-color: whitesmoke; }
+
 /*--------------------------------------------------------------
-## Links
+# Navigation
 --------------------------------------------------------------*/
 a { color: royalblue; }
 
@@ -216,12 +200,9 @@ a:focus { outline: thin dotted; }
 
 a:hover, a:active { outline: 0; }
 
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
 .main-navigation { clear: both; display: block; float: left; width: 100%; }
 
-.main-navigation ul { display: none; list-style: none; margin: 0; padding-left: 0; }
+.main-navigation ul { display: none; list-style: none; margin: 0; padding-left: 0; max-width: 100%; }
 
 .main-navigation ul ul { -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); float: left; position: absolute; top: 100%; left: -999em; z-index: 99999; }
 
@@ -229,7 +210,7 @@ a:hover, a:active { outline: 0; }
 
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul { left: 100%; }
 
-.main-navigation ul ul a { width: 200px; }
+.main-navigation ul ul a { width: 80px; }
 
 .main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul { left: auto; }
 
@@ -277,36 +258,6 @@ a:hover, a:active { outline: 0; }
 .clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after { clear: both; }
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget { margin: 0 0 1.5em; /* Make sure select elements fit in widgets. */ }
-
-.widget select { max-width: 100%; }
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.sticky { display: block; }
-
-.hentry { margin: 0 0 1.5em; }
-
-.updated:not(.published) { display: none; }
-
-.page-content, .entry-content, .entry-summary { margin: 1.5em 0 0; }
-
-.page-links { clear: both; margin: 0 0 1.5em; }
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a { word-wrap: break-word; }
-
-.bypostauthor { display: block; }
-
-/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -316,29 +267,7 @@ a:hover, a:active { outline: 0; }
 .infinity-end.neverending .site-footer { display: block; }
 
 /*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley { border: none; margin-bottom: 0; margin-top: 0; padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed, iframe, object { max-width: 100%; }
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link { display: inline-block; }
-
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-.wp-caption { margin-bottom: 1.5em; max-width: 100%; }
-
-.wp-caption img[class*="wp-image-"] { display: block; margin-left: auto; margin-right: auto; }
-
-.wp-caption .wp-caption-text { margin: 0.8075em 0; }
-
-.wp-caption-text { text-align: center; }
-
-/*--------------------------------------------------------------
-## Galleries
+# Gallery
 --------------------------------------------------------------*/
 .gallery { margin-bottom: 1.5em; }
 

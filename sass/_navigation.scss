@@ -1,3 +1,23 @@
+a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -9,6 +29,7 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		max-width: 100%;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -21,6 +42,7 @@
 			ul {
 				left: -999em;
 				top: 0;
+
 			}
 
 			li {
@@ -31,7 +53,7 @@
 			}
 
 			a {
-				width: 200px;
+				width: 80px;
 			}
 
 			:hover > a,
