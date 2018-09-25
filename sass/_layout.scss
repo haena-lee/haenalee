@@ -6,8 +6,22 @@
     background-color: $color__background-body;
 }
 
-// header
+// header styles
 
-.site-title h1 a {
-    font-family: $font__button;
+.site-header {
+    display: flex;
+    margin: $margin;
+    position: relative;
+   
+    .menu-toggle, .site-branding {
+        flex: 1;
+    }
 }
+
+.site-branding a {
+    font-family: $font__header;
+    @include plain-link;
+    color: $color__text-color-dark-grey;
+}
+
+

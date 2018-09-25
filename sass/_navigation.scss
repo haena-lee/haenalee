@@ -1,129 +1,186 @@
-a {
-	color: $color__link;
+// navigation styles
 
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-}
 
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-		max-width: 100%;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
 
-			ul {
-				left: -999em;
-				top: 0;
-
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 80px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-}
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle {
 	display: block;
+	cursor: pointer;
+	position: fixed;
+	top: 57px;
+	right: $margin;
+	background-color: transparent;
+	border: none;
+	width: 28px;
+	height: 28px;
+
+	.bar {
+        display: block;
+        position: absolute;
+        left: 0;
+        border-top: 2px solid $color__text-color-dark-grey;
+        width: 100%;
+        transition: 300ms;   
+    }
+
+    .bar-top {
+        top: 0;
+    }
+
+    .bar-middle {
+        top: 10px;
+    }
+
+    .bar-bottom {
+        top: 20px;
+	}
+
 }
 
-@media screen and (min-width: 37.5em) {
+.main-navigation.toggled {
+	outline: none;
+
+	.bar-top {
+        top: 10px;
+        transform: rotate(45deg);
+	}
+	
+    .bar-middle {
+        opacity: 0;
+    }
+
+    .bar-bottom {
+        top: 10px;
+        transform: rotate(135deg);
+    }
+}
+
+.main-navigation ul {
+	font-family: $font__header;
+	list-style: none;
+	display: none;
+
+	li a {
+		@include plain-link;
+		color: $color__text-color-dark-grey;
+	}
+}
+
+.main-navigation.toggled ul {
+	display: block;
+	position: absolute;
+	top: 100px;
+	right: 0;
+	text-align: right;
+
+	li {
+		margin-bottom: $padding;
+	}
+}
+
+@media screen and (min-width: $size__phone-landsccape) {
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
-		display: block;
+		display: flex;
+		margin-top: $margin;
+
+		li {
+			margin-left: $padding;
+		}
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
+// .main-navigation {
+// 	clear: both;
+// 	display: block;
+// 	float: left;
+// 	width: 100%;
+
+// 	ul {
+// 		display: none;
+// 		list-style: none;
+// 		margin: 0;
+// 		padding-left: 0;
+// 		max-width: 100%;
+
+// 		ul {
+// 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+// 			float: left;
+// 			position: absolute;
+// 			top: 100%;
+// 			left: -999em;
+// 			z-index: 99999;
+
+// 			ul {
+// 				left: -999em;
+// 				top: 0;
+
+// 			}
+
+// 			li {
+// 				&:hover > ul,
+// 				&.focus > ul {
+// 					left: 100%;
+// 				}
+// 			}
+
+// 			a {
+// 				width: 80px;
+// 			}
+
+// 			:hover > a,
+// 			.focus > a {
+// 			}
+
+// 			a:hover,
+// 			a.focus {
+// 			}
+// 		}
+
+// 		li:hover > ul,
+// 		li.focus > ul {
+// 			left: auto;
+// 		}
+// 	}
+
+// 	li {
+// 		float: left;
+// 		position: relative;
+// 	}
+
+// 	a {
+// 		display: block;
+// 		text-decoration: none;
+// 	}
+
+// }
+
+// .comment-navigation,
+// .posts-navigation,
+// .post-navigation {
+
+// 	.site-main & {
+// 		margin: 0 0 1.5em;
+// 		overflow: hidden;
+// 	}
+
+// 	.nav-previous {
+// 		float: left;
+// 		width: 50%;
+// 	}
+
+// 	.nav-next {
+// 		float: right;
+// 		text-align: right;
+// 		width: 50%;
+// 	}
+// }

@@ -183,50 +183,45 @@ textarea { width: 100%; }
 --------------------------------------------------------------*/
 .site { width: 100%; min-height: 100vh; background-color: whitesmoke; }
 
-.site-title h1 a { font-family: "brandon-grotesque", Arial, sans-serif; }
+.site-header { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 30px; position: relative; }
+
+.site-header .menu-toggle, .site-header .site-branding { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.site-branding a { font-family: "brandon-grotesque", Arial, sans-serif; text-decoration: none; text-transform: uppercase; color: #2b2c2e; }
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-a { color: royalblue; }
-
-a:visited { color: purple; }
-
-a:hover, a:focus, a:active { color: midnightblue; }
-
-a:focus { outline: thin dotted; }
-
-a:hover, a:active { outline: 0; }
-
-.main-navigation { clear: both; display: block; float: left; width: 100%; }
-
-.main-navigation ul { display: none; list-style: none; margin: 0; padding-left: 0; max-width: 100%; }
-
-.main-navigation ul ul { -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); float: left; position: absolute; top: 100%; left: -999em; z-index: 99999; }
-
-.main-navigation ul ul ul { left: -999em; top: 0; }
-
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul { left: 100%; }
-
-.main-navigation ul ul a { width: 80px; }
-
-.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul { left: auto; }
-
-.main-navigation li { float: left; position: relative; }
-
-.main-navigation a { display: block; text-decoration: none; }
-
 /* Small menu. */
-.menu-toggle, .main-navigation.toggled ul { display: block; }
+.menu-toggle { display: block; cursor: pointer; position: fixed; top: 57px; right: 30px; background-color: transparent; border: none; width: 28px; height: 28px; }
 
-@media screen and (min-width: 37.5em) { .menu-toggle { display: none; }
-  .main-navigation ul { display: block; } }
+.menu-toggle .bar { display: block; position: absolute; left: 0; border-top: 2px solid #2b2c2e; width: 100%; -webkit-transition: 300ms; transition: 300ms; }
 
-.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation { margin: 0 0 1.5em; overflow: hidden; }
+.menu-toggle .bar-top { top: 0; }
 
-.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous { float: left; width: 50%; }
+.menu-toggle .bar-middle { top: 10px; }
 
-.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next { float: right; text-align: right; width: 50%; }
+.menu-toggle .bar-bottom { top: 20px; }
+
+.main-navigation.toggled { outline: none; }
+
+.main-navigation.toggled .bar-top { top: 10px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.main-navigation.toggled .bar-middle { opacity: 0; }
+
+.main-navigation.toggled .bar-bottom { top: 10px; -webkit-transform: rotate(135deg); transform: rotate(135deg); }
+
+.main-navigation ul { font-family: "brandon-grotesque", Arial, sans-serif; list-style: none; display: none; }
+
+.main-navigation ul li a { text-decoration: none; text-transform: uppercase; color: #2b2c2e; }
+
+.main-navigation.toggled ul { display: block; position: absolute; top: 100px; right: 0; text-align: right; }
+
+.main-navigation.toggled ul li { margin-bottom: 15px; }
+
+@media screen and (min-width: 540px) { .menu-toggle { display: none; }
+  .main-navigation ul { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 30px; }
+  .main-navigation ul li { margin-left: 15px; } }
 
 /*--------------------------------------------------------------
 # Accessibility

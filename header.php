@@ -30,7 +30,6 @@
 			the_custom_logo();
 			?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h1><a href="<?php home_url(); ?>">Haena Lee</a></h1>
 			<?php
 			$haenalee_description = get_bloginfo( 'description', 'display' );
 			if ( $haenalee_description || is_customize_preview() ) :
@@ -40,7 +39,11 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'haenalee' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<span class="bar bar-top"></span>
+				<span class="bar bar-middle"></span>
+				<span class="bar bar-bottom"></span>
+			</button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',

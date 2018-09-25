@@ -120,9 +120,10 @@ add_action( 'widgets_init', 'haenalee_widgets_init' );
  * Enqueue scripts and styles.
  */
 function haenalee_scripts() {
-	wp_enqueue_style( 'haenalee-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'haenalee-typekit', 'https://use.typekit.net/zop0avq.css' );
+
+	wp_enqueue_style( 'haenalee-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'haenalee-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
