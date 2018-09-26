@@ -32,7 +32,7 @@
 			// check that ACFs are filled out
 			if(get_field('home_cta_text') && get_field('home_cta_link')){
 				?>
-				<p class="home_cta_text"><a href="<?php echo $home_cta_link; ?>"><?php echo $home_cta_text; ?></a></p>
+				<p class="home-cta-text"><a href="<?php echo $home_cta_link; ?>"><?php echo $home_cta_text; ?></a></p>
 				<?php
 			}
 		}

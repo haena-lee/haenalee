@@ -15,17 +15,14 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'haenalee' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'haenalee' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'haenalee' ), 'haenalee', '<a href="http://haena.ca">Haena Lee</a>' );
-				?>
+			<div class="copyright">
+				<p>&copy; Haena Lee | 2018</p>
+			</div><!-- .copyright -->
+			<div class="social-links">
+				<a href="https://www.instagram.com/haenaleedesign/" target="_blank">Instagram</a>
+				<a href="https://twitter.com/haenaleedesign" target="_blank">Twitter</a>
+				<a href="https://www.linkedin.com/in/haena-lee-profile/" target="_blank">LinkedIn</a>
+			</div><!-- .social-links -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

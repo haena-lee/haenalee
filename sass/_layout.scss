@@ -1,8 +1,10 @@
 // main site layout
 .site {
     width: 100%;
-    min-height: 100vh;
+    min-height: 93vh;
+    margin-top: 0;
     background-color: $color__background-body;
+    position: relative;
 }
 
 // header styles
@@ -27,17 +29,106 @@
 // content area styles
 .site-content {
     margin: $margin;
+    padding: $padding;
+    min-height: 60vh;
+
+    .entry-content p {
+        color: $color__text-color-dark-grey;
+        font-family: $font__header;
+        font-size: $font-xlarge;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .entry-content .home-cta-text {
+        margin-top: $margin*2;
+
+        a {
+            @include plain-link;
+            background-color: $color__orange-highlight;
+            padding: $padding/2 $padding*2;
+            font-size: $font-small;
+            font-weight: 600;
+            color: white;
+            border-radius: 20px;
+            transition: all 300ms ease;
+        }
+
+        a:hover {
+            background-color: $color__orange-hover;
+        }
+    }
     
 }
 
 
+// footer styles
+
+.site-footer::before {
+    border-top: 2px solid rgb(235, 235, 235);
+    width: 50px;
+    margin: $margin auto;
+}
+
+.site-footer {
+    color: $color__text-color-dark-grey;
+    font-family: $font__header;
+    text-transform: uppercase;
+    font-size: $font-xsmall;
+    font-weight: 500;
+    text-align: center;
+
+    .social-links {
+        a {
+            @include plain-link;
+            display: block;
+            padding: $padding;
+            color: $color__text-color-dark-grey;
+            transition: all 300ms ease;
+        }
+        a:hover {
+            color: $color__orange-hover;
+        }
+    }
+}
+
+
 @media screen and (min-width: $size__phone-landscape) {
-} // end media query phone-landscape
+    .site-content {
+        min-height: 70vh;
+    }
+
+    .site-info {
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .social-links {
+        display: flex;
+        text-align: center;
+        max-width: 500px;
+    }
+
+
+}
 
 @media screen and (min-width: $size__tablet-landscape) {
     .site-header .site-title a {
         font-size: $font-xxlarge;
     }
+
+    .site-content .entry-content {
+        max-width: 670px;
+        margin: 0 auto;
+        text-align: center;
+        p {
+            font-size: $font-xxlarge;
+        }
+        
+    }
+
 }
 
 @media screen and (min-width: $size__destktop-regular) {

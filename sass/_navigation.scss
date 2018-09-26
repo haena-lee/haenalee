@@ -9,13 +9,14 @@
 .menu-toggle {
 	display: block;
 	cursor: pointer;
-	position: fixed;
-	top: 57px;
+	position: absolute;
+	top: 27px;
 	right: $margin;
 	background-color: transparent;
 	border: none;
 	width: 28px;
 	height: 28px;
+	outline: none;
 
 	.bar {
         display: block;
@@ -66,6 +67,7 @@
 	li a {
 		@include plain-link;
 		color: $color__text-color-dark-grey;
+		font-weight: 600;
 	}
 }
 
@@ -73,7 +75,7 @@
 	display: block;
 	position: absolute;
 	top: 100px;
-	right: 0;
+	right: $margin;
 	text-align: right;
 
 	li {
@@ -93,20 +95,41 @@
 
 		li {
 			font-size: $font-small;
-			margin-left: $padding/2;
+			margin: 0 $padding;
 
 			a {
-				padding: $padding/2;
+				padding: $padding/2 0;
+				transition: left 300ms ease;
+				position: relative;
 			}
+
+			// left to right animation on hover
+			a:after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 2px;
+				margin-top: 5px;
+				bottom: 0;
+				right: 0;
+				background-color: $color__orange-highlight;
+				transition: width 300ms ease;
+			}
+
+			a:hover:after {
+				width: 100%;
+				left: 0;
+				background-color: $color__orange-highlight;
+			}
+
 		}
 	}
 }
 
 @media screen and (min-width: $size__tablet-landscape) {
 	.main-navigation ul li a {
-		font-size: $font-medium;
-		margin-left: $padding;
-		padding: $padding;
+		margin: 0 $padding;
+		padding: $padding/2 0;
 	}
 }
 
