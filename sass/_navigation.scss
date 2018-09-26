@@ -81,18 +81,32 @@
 	}
 }
 
-@media screen and (min-width: $size__phone-landsccape) {
+@media screen and (min-width: $size__phone-landscape) {
 	.menu-toggle {
 		display: none;
 	}
 
+	// full navgitation menu (not hamburger)
 	.main-navigation ul {
 		display: flex;
 		margin-top: $margin;
 
 		li {
-			margin-left: $padding;
+			font-size: $font-small;
+			margin-left: $padding/2;
+
+			a {
+				padding: $padding/2;
+			}
 		}
+	}
+}
+
+@media screen and (min-width: $size__tablet-landscape) {
+	.main-navigation ul li a {
+		font-size: $font-medium;
+		margin-left: $padding;
+		padding: $padding;
 	}
 }
 

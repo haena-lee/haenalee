@@ -1,5 +1,4 @@
 // main site layout
-
 .site {
     width: 100%;
     min-height: 100vh;
@@ -7,7 +6,6 @@
 }
 
 // header styles
-
 .site-header {
     display: flex;
     margin: $margin;
@@ -16,12 +14,39 @@
     .menu-toggle, .site-branding {
         flex: 1;
     }
+
+    .site-title a {
+        @include plain-link;
+        font-family: $font__header;
+        font-size: $font-xlarge;
+        color: $color__text-color-dark-grey;
+        padding: $padding;
+    }    
 }
 
-.site-branding a {
-    font-family: $font__header;
-    @include plain-link;
-    color: $color__text-color-dark-grey;
+// content area styles
+.site-content {
+    margin: $margin;
+    
 }
+
+
+@media screen and (min-width: $size__phone-landscape) {
+} // end media query phone-landscape
+
+@media screen and (min-width: $size__tablet-landscape) {
+    .site-header .site-title a {
+        font-size: $font-xxlarge;
+    }
+}
+
+@media screen and (min-width: $size__destktop-regular) {
+    .site-header {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
 
 
