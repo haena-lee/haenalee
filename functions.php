@@ -42,6 +42,12 @@ if ( ! function_exists( 'haenalee_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		// add custom image sizes
+
+		add_image_size ('haenalee-large', 1100, 9999);
+		add_image_size ('haenalee-medium', 600, 9999);
+		add_image_size ('haenalee-small', 300, 9999);
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'haenalee' ),

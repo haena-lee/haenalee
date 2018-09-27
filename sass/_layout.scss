@@ -23,7 +23,12 @@
         font-size: $font-xlarge;
         color: $color__text-color-dark-grey;
         padding: $padding;
-    }    
+        transition: all 300ms ease;
+    }
+
+    .site-title a:hover {
+        color: $color__text-color-light-grey;
+    }
 }
 
 // content area styles
@@ -59,6 +64,56 @@
         }
     }
     
+}
+
+// content-area for "work" page styles
+.project-container {
+    margin: $margin*2 auto;
+    
+    .project-thumbnail {
+        transition: all 400ms ease-in-out;
+    }
+
+    .project-thumbnail:hover {
+        transform: scale(0.95);
+    }
+
+    .entry-title {
+        margin-bottom: 0;
+        font-size: $font-medium;
+        font-family: $font__header;
+        text-transform: uppercase;
+        color: $color__text-color-dark-grey;
+        transition: all 300ms ease;
+    }
+
+    .short-description {
+        font-family: $font__body;
+        font-size: $font-xsmall;
+        color: $color__text-color-dark-grey;
+    }
+
+    .project-link {
+        font-family: $font__header;
+        font-size: $font-xsmall;
+        font-weight: 500;
+        margin-top: $margin;
+        
+        a {
+          @include plain-link;
+          padding: $padding/1.5 $padding*1.5;
+          color: white;
+          background-color: $color__orange-highlight;
+          border-radius: 30px;
+          transition: all 300ms ease;
+        }
+
+        a:hover {
+            background-color: $color__orange-hover;
+        }
+    }
+
+
 }
 
 
@@ -102,7 +157,7 @@
         display: flex;
         justify-content: space-between;
         max-width: 80%;
-        margin: 0 auto;
+        margin: $margin auto;
     }
 
     .social-links {
@@ -111,7 +166,17 @@
         max-width: 500px;
     }
 
+    .project-container {
 
+        .description-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .project-link {
+            margin-top: 0;
+        }
+    }
 }
 
 @media screen and (min-width: $size__tablet-landscape) {
@@ -133,10 +198,28 @@
 
 @media screen and (min-width: $size__destktop-regular) {
     .site-header {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    .site-content {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .work-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .project-container {
+            max-width: 45%;
+            margin: $margin*2 0 $margin*3 0;
+        }
+
+    }
+
 }
 
 
