@@ -11,7 +11,7 @@
 	cursor: pointer;
 	position: absolute;
 	top: 27px;
-	right: $padding;
+	right: 0;
 	background-color: transparent;
 	border: none;
 	width: 28px;
@@ -75,8 +75,9 @@
 	display: block;
 	position: absolute;
 	top: 100px;
-	right: $padding;
+	right: 0;
 	text-align: right;
+	z-index: 999;
 
 	li {
 		margin-bottom: $padding;
@@ -95,7 +96,7 @@
 
 		li {
 			font-size: $font-small;
-			margin: 0 $padding;
+			margin-left: $padding;
 
 			a {
 				padding: $padding/2 0;
@@ -128,7 +129,7 @@
 
 @media screen and (min-width: $size__tablet-landscape) {
 	.main-navigation ul li a {
-		margin: 0 $padding;
+		margin-left: $padding;
 		padding: $padding/2 0;
 	}
 }

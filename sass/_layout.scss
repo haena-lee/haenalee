@@ -1,7 +1,7 @@
 // main site layout
 .site {
     width: 100%;
-    min-height: 93vh;
+    min-height: 96vh;
     margin-top: 0;
     background-color: $color__background-body;
     position: relative;
@@ -22,7 +22,7 @@
         font-family: $font__header;
         font-size: $font-xlarge;
         color: $color__text-color-dark-grey;
-        padding: $padding;
+        padding: $padding 0;
         transition: all 300ms ease;
     }
 
@@ -32,10 +32,9 @@
 }
 
 // content area styles
-.site-content {
-    margin: $margin;
-    padding: $padding;
-    min-height: 60vh;
+.content-area {
+    margin: 0 $margin;
+    // min-height: 60vh;
 
     .entry-content p {
         color: $color__text-color-dark-grey;
@@ -46,7 +45,7 @@
     }
 
     .entry-content .home-cta-text {
-        margin-top: $margin*2;
+        margin-top: $margin;
 
         a {
             @include plain-link;
@@ -67,15 +66,16 @@
 }
 
 // content-area for "work" page styles
+
+.content-area {
+    margin-bottom: 200px;
+}
+
 .project-container {
-    margin: $margin*2 auto;
+    margin: $margin auto $margin*4 auto;
     
     .project-thumbnail {
         transition: all 400ms ease-in-out;
-    }
-
-    .project-thumbnail:hover {
-        transform: scale(0.95);
     }
 
     .entry-title {
@@ -95,13 +95,13 @@
 
     .project-link {
         font-family: $font__header;
-        font-size: $font-xsmall;
+        font-size: $font-xxsmall;
         font-weight: 500;
         margin-top: $margin;
         
         a {
           @include plain-link;
-          padding: $padding/1.5 $padding*1.5;
+          padding: $padding/2 $padding;
           color: white;
           background-color: $color__orange-highlight;
           border-radius: 30px;
@@ -115,11 +115,142 @@
 }
 
 // single work page styles
+.single-work-container {
+    margin-top: $margin;
+    color: $color__text-color-dark-grey;
 
+    .summary-container {
+        margin: $margin;
+    }
+
+    .project-thumbnail {
+        position: relative;
+    }
+
+    .view-live a {
+        position: absolute;
+        right: $padding;
+        bottom: $padding;
+        font-family: $font__header;
+        @include plain-link;
+        font-size: $font-xxsmall;
+        font-weight: 500;
+        color: white;
+        background-color: $color__orange-highlight;
+        padding: $padding/1.5 $padding*1.5;
+        border-radius: 35px;
+        transition: all 300ms ease;
+    }
+
+    .view-live a:hover {
+        background-color: $color__orange-hover;
+    }
+
+    .entry-title {
+        font-family: $font__header;
+        text-transform: uppercase;
+        font-size: $font-large;
+    }
+
+    .short-description p {
+        font-family: $font__body;
+        font-size: $font-small;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+    }
+
+    .short-description p::after {
+        content: "";
+        display: block;
+        margin-top: $margin;
+        width: 60px;
+        height: 3px;
+        background-color: $color__orange-highlight;
+    }
+
+    .tools-used {
+        margin: $padding*3 0;
+
+        // h4::after {
+        //     content: "";
+        //     display: block;
+        //     margin-top: $padding/2;
+        //     width: 45px;
+        //     height: 2px;
+        //     background-color: $color__orange-highlight;
+        // }
+
+        .tool-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 400px;
+        }
+
+        .each-tool {
+            min-width: 120px;
+            font-family: $font__header;
+            text-transform: uppercase;
+            font-size: $font-xsmall;    
+            font-weight: 500;
+            color: $color__text-color-light-grey;
+            margin: 8px 0;
+        }
+    }
+
+    .long-description p {
+        margin: $padding auto;
+        font-family: $font__body;
+        font-size: $font-small;
+        font-weight: 400;
+        line-height: $font__line-height-body;
+    }
+
+    .portfolio-content-block {
+        background-color: $color__background-screen;
+        margin: $margin*2 auto 200px auto;
+        padding: $margin 0 $margin*2 0;
+        
+        h4 {
+            margin: $margin*2 auto;
+            font-family: $font__header;
+            font-size: $font-small;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        h4::after {
+            content: "";
+            display: block;
+            margin: $padding/2 auto $margin;
+            width: 45px;
+            height: 2px;
+            background-color: $color__orange-highlight;
+        }
+
+        p {
+            font-family: $font__body;
+            font-size: $font-small;
+            font-weight: 400;
+            line-height: $font__line-height-body;
+            margin: $margin;
+        }
+
+    }
+
+}
 
 
 
 // footer styles
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .site-footer::before {
     border-top: 2px solid rgb(235, 235, 235);
@@ -131,17 +262,21 @@
     color: $color__text-color-dark-grey;
     font-family: $font__header;
     text-transform: uppercase;
-    font-size: $font-xsmall;
+    font-size: $font-xxsmall;
     font-weight: 500;
     text-align: center;
+    margin-bottom: $margin;
 
     .social-links {
         a {
             @include plain-link;
-            display: block;
-            padding: $padding;
+            padding: $padding/2;
             color: $color__text-color-dark-grey;
             transition: all 300ms ease;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+            vertical-align: middle;
         }
         a:hover {
             color: $color__orange-hover;
@@ -149,10 +284,20 @@
     }
 }
 
+@media screen and (min-width: $size__phone-inbetween) {
+    .project-container {
+        .description-container {
+            display: flex;
+            justify-content: space-between;
+        }
 
-@media screen and (min-width: $size__phone-landscape) {
-    .site-content {
-        min-height: 70vh;
+        .project-link {
+            margin-top: 0;
+        }
+    }
+
+    .site-footer {
+        margin-bottom: 0;
     }
 
     .site-info {
@@ -168,17 +313,34 @@
         max-width: 500px;
     }
 
-    .project-container {
+}
 
-        .description-container {
-            display: flex;
-            justify-content: space-between;
-        }
 
-        .project-link {
-            margin-top: 0;
-        }
+.related-projects {
+    border: 2px solid pink;
+}
+
+
+@media screen and (min-width: $size__phone-landscape) {
+    .site-header,
+    .content-area,
+    .summary-container,
+    .portfolio-content-block p {
+        padding: $padding;
     }
+
+    .content-area {
+        margin-bottom: 100px;
+    }
+
+}
+
+@media screen and (min-width: $size__tablet-portrait) {
+    .project-container .project-link a {
+        font-size: $font-xsmall;
+        padding: $padding/1.5 $padding*2;
+    }
+
 }
 
 @media screen and (min-width: $size__tablet-landscape) {
@@ -186,7 +348,7 @@
         font-size: $font-xxlarge;
     }
 
-    .site-content .entry-content {
+    .content-area .entry-content {
         max-width: 670px;
         margin: 0 auto;
         text-align: center;
@@ -196,18 +358,39 @@
         
     }
 
+    .single-work-container {
+        .view-live a {
+            position: absolute;
+            right: $margin;
+            bottom: $margin;
+            @include plain-link;
+            font-size: $font-xsmall;
+            padding: $padding/1.5 $padding*2;
+        }
+    }
+
 }
 
-@media screen and (min-width: $size__destktop-regular) {
+@media screen and (min-width: $size__desktop-regular) {
     .site-header {
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .site-content {
+
+    .project-intro-container {
+        margin: auto 10%;
+        padding: 0 $padding;
+        .summary-container {
+            margin: $margin*2 0;    
+            padding: 0;
+        }
+    }
+
+    .content-area {
         max-width: 80%;
-        margin: 0 auto;
+        margin: 0 auto 150px auto;
     }
 
     .work-page {
@@ -217,12 +400,94 @@
 
         .project-container {
             max-width: 45%;
-            margin: $margin*2 0 $margin*3 0;
+            margin: 2.5% 0 10% 0;
+
+            .description-container {
+                display: block;
+            }
+            .entry-title {
+                font-size: $font-mediumlarge;
+            }
+            .short-description {
+                font-size: $font-small;
+            }
+            .project-link {
+                margin-top: $margin;
+            }
+            .entry-title {
+                font-size: $font-medium;
+            }
+            .short-description {
+                font-size: $font-xsmall;
+            }
         }
 
     }
 
+
+    footer p, footer a {
+        font-size: $font-xsmall;
+    }
+
 }
 
+@media screen and (min-width: $size__desktop-large) {
 
+    .project-intro-container {
+
+        .entry-title {
+            margin-top: 0;
+        }
+
+    }
+
+    .work-page .project-container {
+
+        .description-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .project-link {
+            margin-top: 0;
+            a {
+                font-size: $font-xsmall;
+                padding: $padding/1.5 $padding*2;
+            }
+        }
+    } 
+}
+
+@media screen and (min-width: $size__desktop-xlarge) {
+    .project-intro-container {
+
+        max-width: 80%;
+        margin: auto;
+        padding: $padding;
+        display: flex;
+        justify-content: space-between;
+
+
+        .summary-container {
+            border: 3px solid $color__text-color-dark-grey;
+            margin: $margin*2 auto;
+            padding: $margin;
+        }
+
+        .project-thumbnail {
+            width: 45%;
+            .view-live a {
+                bottom: $padding*3;
+                right: $margin;
+            }
+        }
+
+        .summary-container {
+            width: 50%;
+            height: 0;
+            padding-bottom: 27.5%;
+            margin: 0 0 auto auto;
+        }
+
+    }  
+}
 

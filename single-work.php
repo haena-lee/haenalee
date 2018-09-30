@@ -10,21 +10,27 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="single-work-container">
 		<main id="main" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/content-single', get_post_type() );
 
 			// $terms = get_terms(array(
 			// 	'taxonomy' => 'tools-used',
 			// 	'hide_empty' => false,
 			// ));
 
-			the_post_navigation();
+			?>
+			<div class="related-projects">
+				<?php
+				the_post_navigation();
+				?>
+			</div><!-- .related-projects -->
+			<?php
 
 		endwhile; // End of the loop.
 		?>

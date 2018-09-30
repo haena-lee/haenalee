@@ -18,17 +18,6 @@
 	</div><!-- .project-thumbnail -->
 	
 	
-	<?php
-		// display ACF live site link
-		if(function_exists('get_field')){
-			if(get_field('live_site_link')){
-				$live_site_link = get_field('live_site_link');
-				?>
-				<p class="view-live"><a href="<?php echo $live_site_link['url'];?>" target="<?php echo $live_site_link['target'] ?>"><?php echo $live_site_link['title']; ?></a></p>
-				<?php
-			}
-		}
-	?>
 
 	<?php
 		// project title
