@@ -27,7 +27,7 @@ get_header();
 			?>
 			<div class="related-projects">
 				<?php
-				the_post_navigation();
+				// the_post_navigation();
 				?>
 			</div><!-- .related-projects -->
 			<?php

@@ -96,7 +96,7 @@
 
 		li {
 			font-size: $font-small;
-			margin-left: $padding;
+			margin-left: $margin;
 
 			a {
 				padding: $padding/2 0;
@@ -131,6 +131,12 @@
 	.main-navigation ul li a {
 		margin-left: $padding;
 		padding: $padding/2 0;
+	}
+}
+
+@media screen and (min-width: $size__desktop-regular){
+	.main-navigation ul li a {
+		margin-left: $padding*3;
 	}
 }
 

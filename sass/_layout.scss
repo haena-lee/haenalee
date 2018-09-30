@@ -91,6 +91,7 @@
         font-family: $font__body;
         font-size: $font-xsmall;
         color: $color__text-color-dark-grey;
+        line-height: $font__line-height-body;
     }
 
     .project-link {
@@ -149,7 +150,7 @@
     .entry-title {
         font-family: $font__header;
         text-transform: uppercase;
-        font-size: $font-large;
+        font-size: $font-medium;
     }
 
     .short-description p {
@@ -171,15 +172,6 @@
 
     .tools-used {
         margin: $padding*3 0;
-
-        // h4::after {
-        //     content: "";
-        //     display: block;
-        //     margin-top: $padding/2;
-        //     width: 45px;
-        //     height: 2px;
-        //     background-color: $color__orange-highlight;
-        // }
 
         .tool-container {
             display: flex;
@@ -214,7 +206,7 @@
         h4 {
             margin: $margin*2 auto;
             font-family: $font__header;
-            font-size: $font-small;
+            font-size: $font-medium;
             text-transform: uppercase;
             text-align: center;
         }
@@ -222,9 +214,9 @@
         h4::after {
             content: "";
             display: block;
-            margin: $padding/2 auto $margin;
+            margin: $padding auto $margin;
             width: 45px;
-            height: 2px;
+            height: 3px;
             background-color: $color__orange-highlight;
         }
 
@@ -316,11 +308,6 @@ footer {
 }
 
 
-.related-projects {
-    border: 2px solid pink;
-}
-
-
 @media screen and (min-width: $size__phone-landscape) {
     .site-header,
     .content-area,
@@ -336,6 +323,19 @@ footer {
 }
 
 @media screen and (min-width: $size__tablet-portrait) {
+
+    .summary-container {
+        .entry-title {
+        font-size: $font-large;
+        }
+    }
+
+    .single-work-container .portfolio-content-block {
+        h4 {
+            font-size: $font-mediumlarge;
+        }
+    }
+
     .project-container .project-link a {
         font-size: $font-xsmall;
         padding: $padding/1.5 $padding*2;
@@ -378,7 +378,6 @@ footer {
         margin-right: auto;
     }
 
-
     .project-intro-container {
         margin: auto 10%;
         padding: 0 $padding;
@@ -405,9 +404,6 @@ footer {
             .description-container {
                 display: block;
             }
-            .entry-title {
-                font-size: $font-mediumlarge;
-            }
             .short-description {
                 font-size: $font-small;
             }
@@ -421,12 +417,29 @@ footer {
                 font-size: $font-xsmall;
             }
         }
+    }
 
+    .summary-container {
+        display: flex;
+        justify-content: space-between;
+
+        .left-block {
+            width: 45%;
+            border-right: 2px solid $color__border;
+        }
+        .right-block {
+            width: 50%;
+            margin-top: 48px;
+        }
     }
 
 
     footer p, footer a {
         font-size: $font-xsmall;
+    }
+
+    .site-footer .social-links a {
+        padding-left: $padding*3;
     }
 
 }
@@ -459,19 +472,11 @@ footer {
 
 @media screen and (min-width: $size__desktop-xlarge) {
     .project-intro-container {
-
         max-width: 80%;
         margin: auto;
         padding: $padding;
         display: flex;
         justify-content: space-between;
-
-
-        .summary-container {
-            border: 3px solid $color__text-color-dark-grey;
-            margin: $margin*2 auto;
-            padding: $margin;
-        }
 
         .project-thumbnail {
             width: 45%;
@@ -482,12 +487,25 @@ footer {
         }
 
         .summary-container {
-            width: 50%;
+            width: 52%;
             height: 0;
-            padding-bottom: 27.5%;
+            padding: $padding*3;
+            padding-bottom: 26.5%;
             margin: 0 0 auto auto;
-        }
+            border: 4px solid $color__text-color-dark-grey;
 
+            .tools-used {
+                margin: $margin 0;
+            }
+
+            .left-block {
+                width: 40%;
+            }
+            .right-block {
+                width: 55%;
+                margin-top: $margin;
+            }
+        }
     }  
 }
 

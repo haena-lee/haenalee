@@ -30,7 +30,7 @@
 		
 		
 			<div class="summary-container">
-				
+				<div class="left-block">
 				<?php
 				// project title
 				if ( is_singular() ) :
@@ -38,7 +38,7 @@
 				else :
 					the_title( '<h2 class="entry-title">', '</h2>' );
 				endif;
-			?>
+				?>
 				<?php
 				// short description of the project
 				if(function_exists('get_field')){
@@ -71,7 +71,8 @@
 						}
 						?>
 					</div><!-- .tools-used -->	
-	
+					</div><!-- .left-block -->
+					<div class="right-block">
 					<div class="long-description">
 						<?php
 						the_content( sprintf(
@@ -88,6 +89,7 @@
 						) );
 						?>
 					</div><!-- .long-description -->
+					</div><!-- .right-block -->
 			</div><!-- .summary-container -->
 		</div><!-- .project-intro-container -->		
 					<?php
