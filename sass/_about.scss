@@ -1,0 +1,107 @@
+// about page styles
+
+.entry-header-about {
+    margin: $margin 0 $margin*2 0;
+    color: $color__text-color-dark-grey;
+    font-family: $font__header;
+    font-size: $font-large;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.entry-header-about::after {
+    content: "";
+    display: block;
+    margin: $padding 0 $margin 0;
+    width: 60px;
+    height: 3px;
+    background-color: $color__orange-highlight;
+}
+
+.entry-content-about {
+    color: $color__text-color-dark-grey;
+    font-family: $font__body;
+    font-size: $font-small;
+    line-height: $font__line-height-body;
+    margin: $margin auto;
+}
+
+.about-picture {
+    text-align: center;
+}
+
+.about-picture img {
+    margin: $margin*2 auto;
+    border-radius: 50%;
+}
+
+.about-container {
+    background-color: $color__background-screen;
+    padding: $margin $padding;
+    margin-bottom: $margin*2;
+    box-shadow: 40px 40px 0 -36px $color__orange-highlight;
+    width: 90%;
+
+    h4 {
+        margin-top: 0;
+        font-family: $font__header;
+        text-transform: uppercase;
+        font-size: $font-small;
+        font-weight: 600;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: $padding;
+        font-family: $font__header;
+        font-size: $font-xsmall;
+        font-weight: 500;
+        line-height: $font__line-height-list;
+    }
+
+    .fa-angle-right {
+        color: $color__text-color-light-grey;
+    }
+}
+
+.about-container:nth-child(even) {
+    box-shadow: -40px 40px 0 -37px $color__orange-highlight;
+}
+
+.about-container:nth-child(odd) {
+    box-shadow: 40px 40px 0 -37px $color__orange-highlight;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media screen and (min-width: $size__phone-inbetween) {
+    .about-container {
+        width: 70%;
+        padding: $margin;
+
+        ul {
+            padding-left: $margin;
+            font-size: $font-small;
+        }
+    }
+}
+
+@media screen and (min-width: $size__tablet-landscape) {
+    .about-container {
+        width: 60%;
+        
+        h4 {
+            font-size: $font-medium;
+        }
+
+        ul {
+            font-size: $font-medium;
+        }
+    }
+}
+
+@media screen and (min-width: $size__desktop-regular) {
+    
+}

@@ -46,6 +46,7 @@ if ( ! function_exists( 'haenalee_setup' ) ) :
 
 		add_image_size ('haenalee-large', 1100, 9999);
 		add_image_size ('haenalee-medium', 600, 9999);
+		add_image_size ('haenalee-small-med', 400, 9999);
 		add_image_size ('haenalee-small', 300, 9999);
 
 		// This theme uses wp_nav_menu() in one location.
@@ -130,6 +131,8 @@ function haenalee_scripts() {
 	wp_enqueue_style( 'haenalee-typekit', 'https://use.typekit.net/zop0avq.css' );
 
 	wp_enqueue_style( 'haenalee-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'haenalee-font-awesome', get_template_directory_uri() . '/fonts/fontawesome/js/fontawesome-all.min.js', array(), '20181003', true );
 
 	wp_enqueue_script( 'haenalee-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

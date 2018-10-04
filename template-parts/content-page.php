@@ -10,20 +10,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header class="entry-header-about">
+		<?php the_title(); ?>
 	</header><!-- .entry-header -->
 
-	<?php haenalee_post_thumbnail(); ?>
-
-	<div class="entry-content">
+	<div class="entry-content-about">
 		<?php
 		the_content();
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'haenalee' ),
-			'after'  => '</div>',
-		) );
+		?>
+		<div class="about-picture">
+			<?php the_post_thumbnail('haenalee-small-med'); ?>
+		</div><!-- .about-picture -->
+		<?php
 
 		// check that ACF exists
 		if(function_exists('get_field')){
@@ -31,24 +29,34 @@
 			if(have_rows('about_me')){
 				while(have_rows('about_me')){
 					the_row();
-					echo '<div class="about-section">';
+					?>
+					<div class="about-container">
+					<?php
 					// store each sub-field in a variable
 						$about_title = get_sub_field('about_title');
-						echo '<h4>'. $about_title .'</h4>';
+						?>
+						<h4><?php echo $about_title; ?></h4>
+						<?php
 						// check for rows in child repeater
 						if(have_rows('about_list')){
 							while(have_rows('about_list')){
 								the_row();
-								echo '<ul>';
-									if(get_sub_field('qualification')){
-										echo '<li>';
-											the_sub_field('qualification');
-										echo '</li>';
-									}
-								echo '</ul>';
+								?>
+								<ul>
+								<?php
+								if(get_sub_field('qualification')){
+									?>
+									<li><i class="fas fa-angle-right fa-sm"> </i> <?php echo the_sub_field('qualification'); ?></li>
+									<?php
+								}
+								?>
+								</ul>
+								<?php
 							}
 						}
-					echo '</div>';
+					?>
+					</div><!-- .about-container -->
+					<?php
 				}
 			}
 		}
