@@ -14,6 +14,7 @@
 	<div class="project-intro-container">
 		<div class="project-thumbnail">
 			<?php the_post_thumbnail(); ?>
+			<div class="overlay">hello</div>
 			<?php
 			// display ACF live site link
 			if(function_exists('get_field')){

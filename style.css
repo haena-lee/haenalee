@@ -395,8 +395,7 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
   .about-cta-button { margin-bottom: 90px; }
   .about-container { width: 70%; padding: 30px; } }
 
-@media screen and (min-width: 1020px) { .about-content { font-size: 1.1rem; }
-  .about-container h4 { font-size: 1.1rem; }
+@media screen and (min-width: 1020px) { .about-container h4 { font-size: 1.1rem; }
   .about-container ul { font-size: 1.1rem; } }
 
 @media screen and (min-width: 1480px) { .about-container { padding: 30px; width: 55%; }
