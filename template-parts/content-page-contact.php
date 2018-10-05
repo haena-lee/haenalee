@@ -10,20 +10,24 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header-about">
-		<?php the_title(); ?>
+	<header class="entry-header-contact">
+		<?php // the_title(); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content-about">
-		<?php
-		the_content();
-		// display email ACF
-		if(function_exists('get_field')){
-			if(get_field('email_me') && get_field('contact_email')){
-				$email_me = get_field('email_me');
-				$email_link = get_field('contact_email');
-				?>
-				<p><?php echo $email_me; ?><a href="mailto:<?php echo $email_link; ?>"><?php echo $email_link; ?></a></p>
+	<div class="entry-content-contact">
+		<div class="header-text">
+			<?php
+			the_content();
+			// display email ACF
+			if(function_exists('get_field')){
+				if(get_field('email_me') && get_field('contact_email')){
+					$email_me = get_field('email_me');
+					$email_link = get_field('contact_email');
+					?>
+					<div class="contact-info">
+						<p><?php echo $email_me; ?><a href="mailto:<?php echo $email_link; ?>"><?php echo $email_link; ?></a></p>
+					</div><!-- .contact-info -->
+		</div><!-- .header-text -->
 				<?php
 			}
 		}
@@ -42,6 +46,6 @@
 		}
 
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .entry-content-contact -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

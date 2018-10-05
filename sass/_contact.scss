@@ -1,0 +1,126 @@
+// contact page styles
+
+.entry-content-contact {
+    color: $color__text-color-dark-grey;
+    font-family: $font__header;
+    font-size: $font-mediumlarge;
+    font-weight: 500;
+    margin: $margin auto;
+}
+
+.contact-info {
+    margin-bottom: $margin*2;
+    p {
+        text-transform: lowercase;
+    }
+    a {
+        text-decoration: none;
+        color: $color__text-color-dark-grey;
+        border-bottom: 2px solid $color__orange-highlight;
+        transition: all 300ms ease;
+    }
+    a:hover {
+        color: $color__orange-hover;
+        border-bottom: 2px solid $color__orange-hover;
+    }
+}
+
+.contact-form {
+    border: 2px solid $color__text-color-dark-grey;
+    padding: $padding;
+    font-size: $font-small;
+    text-align: left;
+
+    input, textarea {
+        margin-top: $padding;
+        max-width: 100%;
+        padding: 5px 2px 5px 8px;
+        font-family: $font__body;
+        border-radius: 0;
+    }
+
+    input:focus, textarea:focus {
+        outline: 1px solid $color__text-color-light-grey;
+    }
+
+    textarea {
+        padding-left: 8px;
+        padding-top: 8px;
+        font-family: $font__body;
+    }
+
+    input[type=submit]{
+        text-transform: uppercase;
+        background-color: $color__orange-highlight;
+        padding: $padding/2 $padding*2;
+        font-size: $font-small;
+        font-family: $font__header;
+        font-weight: 500;
+        color: white;
+        border: none;
+        border-radius: 35px;
+        cursor: pointer;
+        transition: all 300ms ease;
+    }
+
+    input[type=submit]:hover {
+        background-color: $color__orange-hover;
+    }
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    padding: $padding;
+    border: 2px solid $color__orange-highlight;
+}
+
+span.wpcf7-not-valid-tip {
+    color: $color__orange-highlight;
+}
+
+
+@media screen and (min-width: $size__phone-inbetween) {
+    .contact-form {
+        padding: $margin;
+    }
+}
+
+@media screen and (min-width: $size__tablet-portrait) {
+    .entry-header-contact {
+        text-align: center;
+    }
+
+    .contact-info {
+        margin: $margin*2 auto $margin*3 auto;
+    }
+
+    .entry-content-contact {
+        font-size: $font-large;
+        text-align: center;
+    }
+    .contact-form {
+        padding: $margin;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: $size__desktop-regular){
+    .entry-content-contact {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-text {
+        text-align: left;
+        margin-right: $margin;
+        font-size: $font-xlarge;
+    }
+
+    .contact-form {
+        margin: $margin 0 auto $margin;
+        max-width: 500px;
+    }
+
+}
+
+

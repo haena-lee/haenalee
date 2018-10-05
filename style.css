@@ -361,7 +361,7 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
 
 .entry-header-about::after { content: ""; display: block; margin: 15px 0 30px 0; width: 60px; height: 3px; background-color: #ce4235; }
 
-.entry-content-about { color: #4f515c; font-family: "Roboto", Arial, sans-serif; font-size: 1rem; line-height: 1.5; margin: 30px auto; }
+.entry-content-about { color: #4f515c; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1rem; font-weight: 500; line-height: 1.5; margin: 30px auto; }
 
 .about-cta-button { margin: 30px 0; }
 
@@ -391,7 +391,7 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
 @media screen and (min-width: 880px) { .flex-content-about { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
   .about-picture { display: none; }
   .about-picture-float { display: block; padding-left: 30px; margin-top: 30px; }
-  .about-content { max-width: 800px; padding-right: 30px; }
+  .about-content { max-width: 800px; padding-right: 30px; font-size: 1.1rem; }
   .about-cta-button { margin-bottom: 90px; }
   .about-container { width: 70%; padding: 30px; } }
 
@@ -400,6 +400,46 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
 
 @media screen and (min-width: 1480px) { .about-container { padding: 30px; width: 55%; }
   .about-container ul { font-size: 1.3rem; } }
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.entry-content-contact { color: #4f515c; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.3rem; font-weight: 500; margin: 30px auto; }
+
+.contact-info { margin-bottom: 60px; }
+
+.contact-info p { text-transform: lowercase; }
+
+.contact-info a { text-decoration: none; color: #4f515c; border-bottom: 2px solid #ce4235; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+
+.contact-info a:hover { color: #fa6a5d; border-bottom: 2px solid #fa6a5d; }
+
+.contact-form { border: 2px solid #4f515c; padding: 15px; font-size: 1rem; text-align: left; }
+
+.contact-form input, .contact-form textarea { margin-top: 15px; max-width: 100%; padding: 5px 2px 5px 8px; font-family: "Roboto", Arial, sans-serif; border-radius: 0; }
+
+.contact-form input:focus, .contact-form textarea:focus { outline: 1px solid #919191; }
+
+.contact-form textarea { padding-left: 8px; padding-top: 8px; font-family: "Roboto", Arial, sans-serif; }
+
+.contact-form input[type=submit] { text-transform: uppercase; background-color: #ce4235; padding: 7.5px 30px; font-size: 1rem; font-family: "brandon-grotesque", Arial, sans-serif; font-weight: 500; color: white; border: none; border-radius: 35px; cursor: pointer; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+
+.contact-form input[type=submit]:hover { background-color: #fa6a5d; }
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { padding: 15px; border: 2px solid #ce4235; }
+
+span.wpcf7-not-valid-tip { color: #ce4235; }
+
+@media screen and (min-width: 530px) { .contact-form { padding: 30px; } }
+
+@media screen and (min-width: 710px) { .entry-header-contact { text-align: center; }
+  .contact-info { margin: 60px auto 90px auto; }
+  .entry-content-contact { font-size: 1.6rem; text-align: center; }
+  .contact-form { padding: 30px; max-width: 500px; margin: 0 auto; } }
+
+@media screen and (min-width: 1020px) { .entry-content-contact { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+  .header-text { text-align: left; margin-right: 30px; font-size: 2rem; }
+  .contact-form { margin: 30px 0 auto 30px; max-width: 500px; } }
 
 /*--------------------------------------------------------------
 # Accessibility

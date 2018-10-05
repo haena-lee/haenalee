@@ -20,8 +20,9 @@
 
 .entry-content-about {
     color: $color__text-color-dark-grey;
-    font-family: $font__body;
+    font-family: $font__header;
     font-size: $font-small;
+    font-weight: 500;
     line-height: $font__line-height-body;
     margin: $margin auto;
 }
@@ -130,6 +131,7 @@
     .about-content {
         max-width: 800px;
         padding-right: $margin;
+        font-size: $font-medium;
     }
 
     .about-cta-button {
