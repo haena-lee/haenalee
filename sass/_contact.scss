@@ -16,27 +16,30 @@
     a {
         text-decoration: none;
         color: $color__text-color-dark-grey;
-        border-bottom: 2px solid $color__orange-highlight;
+        border-bottom: 3px solid $color__orange-highlight;
         transition: all 300ms ease;
     }
     a:hover {
         color: $color__orange-hover;
-        border-bottom: 2px solid $color__orange-hover;
+        border-bottom: 3px solid $color__orange-hover;
     }
 }
 
 .contact-form {
-    border: 2px solid $color__text-color-dark-grey;
+    border: 3px solid $color__text-color-dark-grey;
     padding: $padding;
     font-size: $font-small;
     text-align: left;
 
     input, textarea {
         margin-top: $padding;
-        max-width: 100%;
         padding: 5px 2px 5px 8px;
         font-family: $font__body;
         border-radius: 0;
+    }
+
+    input:not([type='submit']), textarea {
+        width: 100%;
     }
 
     input:focus, textarea:focus {
@@ -114,13 +117,24 @@ span.wpcf7-not-valid-tip {
         text-align: left;
         margin-right: $margin;
         font-size: $font-xlarge;
+        max-width: 700px;
     }
 
     .contact-form {
         margin: $margin 0 auto $margin;
-        max-width: 500px;
+        max-width: 600px;
+        width: 400px;
     }
 
 }
 
+@media screen and (min-width: $size__desktop-large){
+    .header-text {
+        text-align: center;
+        line-height: $font__line-height-body;
+    }
 
+    .contact-form {
+        width: 500px;
+    }
+}
