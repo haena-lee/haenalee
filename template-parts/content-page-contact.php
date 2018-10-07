@@ -15,7 +15,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content-contact">
-		<div class="header-text">
+		<div class="contact-text">
 			<?php
 			the_content();
 			// display email ACF
@@ -27,12 +27,30 @@
 					<div class="contact-info">
 						<p><?php echo $email_me; ?><a href="mailto:<?php echo $email_link; ?>"><?php echo $email_link; ?></a></p>
 					</div><!-- .contact-info -->
-		</div><!-- .header-text -->
 				<?php
+				}
 			}
-		}
+			
+			// display large social media
+			?>
+			<div class="large-social-media">
+				<?php
+				if(function_exists('get_field')){
+					if(have_rows('social_media')){
+						while(have_rows('social_media')){
+							the_row();
+							$social_media_name = get_sub_field('social_media_name');
+							$social_media_link = get_sub_field('social_media_link');
+							?>
+							<a href="<?php echo $social_media_link ?>" target="_blank"><?php echo $social_media_name; ?></a>
+							<?php
+						}
+					}
+				}
 
-		?>
+				?>
+			</div><!-- .large-social-media -->
+		</div><!-- .contact-text -->
 
 		<?php
 		// display contact form

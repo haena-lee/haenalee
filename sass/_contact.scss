@@ -9,7 +9,7 @@
 }
 
 .contact-info {
-    margin-bottom: $margin*2;
+    margin: $padding*3 0;
     p {
         text-transform: lowercase;
     }
@@ -22,6 +22,41 @@
     a:hover {
         color: $color__orange-hover;
         border-bottom: 3px solid $color__orange-hover;
+    }
+}
+
+.large-social-media {
+    margin-bottom: $margin*2;
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    
+    a {
+        text-decoration: none;
+        text-transform: lowercase;
+        color: $color__text-color-dark-grey;
+        margin-bottom: $padding;
+        padding-bottom: $padding/2;
+        position: relative;
+    }
+
+    a:after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $color__orange-highlight;
+        transition: width 300ms ease;
+    }
+
+    a:hover {
+        color: $color__text-color-light-grey;
+    }
+
+    a:hover:after {
+        width: 100%;
     }
 }
 
@@ -88,18 +123,24 @@ span.wpcf7-not-valid-tip {
 }
 
 @media screen and (min-width: $size__tablet-portrait) {
-    .entry-header-contact {
+    .contact-text {
         text-align: center;
     }
 
     .contact-info {
-        margin: $margin*2 auto $margin*3 auto;
+        margin: $margin*2 auto;
     }
 
     .entry-content-contact {
         font-size: $font-large;
         text-align: center;
     }
+
+    .large-social-media {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .contact-form {
         padding: $margin;
         max-width: 500px;
@@ -113,28 +154,37 @@ span.wpcf7-not-valid-tip {
         justify-content: space-between;
     }
 
-    .header-text {
+    .contact-text {
         text-align: left;
         margin-right: $margin;
         font-size: $font-xlarge;
         max-width: 700px;
     }
 
+    .large-social-media {
+        margin-left: 0;
+    }
+
     .contact-form {
         margin: $margin 0 auto $margin;
         max-width: 600px;
-        width: 400px;
+        min-width: 400px;
     }
 
 }
 
 @media screen and (min-width: $size__desktop-large){
-    .header-text {
+    .contact-text {
         text-align: center;
         line-height: $font__line-height-body;
     }
 
+    .large-social-media {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .contact-form {
-        width: 500px;
+        width: 600px;
     }
 }
