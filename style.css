@@ -212,8 +212,8 @@ textarea { width: 100%; }
   .main-navigation ul { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 30px; }
   .main-navigation ul li { font-size: 1rem; margin-left: 30px; }
   .main-navigation ul li a { padding: 7.5px 0; -webkit-transition: left 300ms ease; transition: left 300ms ease; position: relative; }
-  .main-navigation ul li a:after { content: ''; position: absolute; width: 0; height: 3px; margin-top: 5px; bottom: 0; right: 0; background-color: #ce4235; -webkit-transition: width 300ms ease; transition: width 300ms ease; }
-  .main-navigation ul li a:hover:after { width: 100%; left: 0; background-color: #ce4235; } }
+  .main-navigation ul li a:after { content: ''; position: absolute; width: 0; height: 3px; margin-top: 5px; bottom: 0; left: 0; background-color: #ce4235; -webkit-transition: width 300ms ease; transition: width 300ms ease; }
+  .main-navigation ul li a:hover:after { width: 100%; background-color: #ce4235; } }
 
 @media screen and (min-width: 880px) { .main-navigation ul li a { margin-left: 15px; padding: 7.5px 0; } }
 
@@ -361,7 +361,7 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
 
 .entry-header-about::after { content: ""; display: block; margin: 15px 0 30px 0; width: 60px; height: 3px; background-color: #ce4235; }
 
-.entry-content-about { color: #4f515c; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1rem; font-weight: 500; line-height: 1.5; margin: 30px auto; }
+.entry-content-about { color: #4f515c; font-family: "Roboto", Arial, sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; margin: 30px auto; }
 
 .about-cta-button { margin: 30px 0; }
 
@@ -391,14 +391,16 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
 @media screen and (min-width: 880px) { .flex-content-about { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
   .about-picture { display: none; }
   .about-picture-float { display: block; padding-left: 30px; margin-top: 30px; }
-  .about-content { max-width: 800px; padding-right: 30px; font-size: 1.1rem; }
+  .about-content { max-width: 800px; padding-right: 30px; }
   .about-cta-button { margin-bottom: 90px; }
   .about-container { width: 70%; padding: 30px; } }
 
-@media screen and (min-width: 1020px) { .about-container h4 { font-size: 1.1rem; }
+@media screen and (min-width: 1020px) { .about-container { width: 60%; }
+  .about-container h4 { font-size: 1.1rem; }
   .about-container ul { font-size: 1.1rem; } }
 
-@media screen and (min-width: 1480px) { .about-container { padding: 30px; width: 55%; }
+@media screen and (min-width: 1480px) { .flex-content-about { margin-bottom: -60px; }
+  .about-container { padding: 30px; width: 55%; }
   .about-container ul { font-size: 1.3rem; } }
 
 /*--------------------------------------------------------------
@@ -442,20 +444,22 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { padding: 15px; borde
 
 span.wpcf7-not-valid-tip { color: #ce4235; }
 
-@media screen and (min-width: 530px) { .contact-form { padding: 30px; } }
-
-@media screen and (min-width: 710px) { .contact-text { text-align: center; }
-  .contact-info { margin: 60px auto; }
-  .entry-content-contact { font-size: 1.6rem; text-align: center; }
+@media screen and (min-width: 530px) { .contact-text { text-align: center; }
   .large-social-media { margin-left: auto; margin-right: auto; }
+  .contact-form { padding: 30px; } }
+
+@media screen and (min-width: 710px) { .contact-info { margin: 60px auto; }
+  .entry-content-contact { font-size: 1.6rem; text-align: center; }
   .contact-form { padding: 30px; max-width: 500px; margin: 0 auto; } }
 
 @media screen and (min-width: 1020px) { .entry-content-contact { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
-  .contact-text { text-align: left; margin-right: 30px; font-size: 2rem; max-width: 700px; }
+  .contact-text { text-align: left; margin-right: 30px; font-size: 1.6rem; max-width: 700px; }
   .large-social-media { margin-left: 0; }
   .contact-form { margin: 30px 0 auto 30px; max-width: 600px; min-width: 400px; } }
 
-@media screen and (min-width: 1480px) { .contact-text { text-align: center; line-height: 1.5; }
+@media screen and (min-width: 1162px) { .contact-text { font-size: 2rem; } }
+
+@media screen and (min-width: 1480px) { .contact-text { text-align: center; line-height: 1.5; font-size: 2rem; }
   .large-social-media { margin-left: auto; margin-right: auto; }
   .contact-form { width: 600px; } }
 

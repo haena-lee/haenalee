@@ -20,9 +20,9 @@
 
 .entry-content-about {
     color: $color__text-color-dark-grey;
-    font-family: $font__header;
+    font-family: $font__body;
     font-size: $font-small;
-    font-weight: 500;
+    font-weight: 400;
     line-height: $font__line-height-body;
     margin: $margin auto;
 }
@@ -131,7 +131,7 @@
     .about-content {
         max-width: 800px;
         padding-right: $margin;
-        font-size: $font-medium;
+        //font-size: $font-medium;
     }
 
     .about-cta-button {
@@ -149,6 +149,7 @@
 @media screen and (min-width: $size__desktop-regular) {
 
     .about-container {
+        width: 60%;
         h4 {
             font-size: $font-medium;
         }
@@ -160,6 +161,11 @@
 }
 
 @media screen and (min-width: $size__desktop-large) {
+
+    .flex-content-about {
+        margin-bottom: -$margin*2;
+    }
+
     .about-container {
         padding: $margin;
         width: 55%;

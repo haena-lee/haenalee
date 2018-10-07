@@ -112,14 +112,13 @@
 				height: 3px;
 				margin-top: 5px;
 				bottom: 0;
-				right: 0;
+				left: 0;
 				background-color: $color__orange-highlight;
 				transition: width 300ms ease;
 			}
 
 			a:hover:after {
 				width: 100%;
-				left: 0;
 				background-color: $color__orange-highlight;
 			}
 

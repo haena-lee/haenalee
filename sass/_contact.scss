@@ -117,16 +117,21 @@ span.wpcf7-not-valid-tip {
 
 
 @media screen and (min-width: $size__phone-inbetween) {
+    .contact-text {
+        text-align: center;
+    }
+
+    .large-social-media {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .contact-form {
         padding: $margin;
     }
 }
 
 @media screen and (min-width: $size__tablet-portrait) {
-    .contact-text {
-        text-align: center;
-    }
-
     .contact-info {
         margin: $margin*2 auto;
     }
@@ -134,11 +139,6 @@ span.wpcf7-not-valid-tip {
     .entry-content-contact {
         font-size: $font-large;
         text-align: center;
-    }
-
-    .large-social-media {
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .contact-form {
@@ -157,7 +157,7 @@ span.wpcf7-not-valid-tip {
     .contact-text {
         text-align: left;
         margin-right: $margin;
-        font-size: $font-xlarge;
+        font-size: $font-large;
         max-width: 700px;
     }
 
@@ -173,10 +173,17 @@ span.wpcf7-not-valid-tip {
 
 }
 
+@media screen and (min-width: 1162px){
+    .contact-text {
+        font-size: $font-xlarge;
+    }
+}
+
 @media screen and (min-width: $size__desktop-large){
     .contact-text {
         text-align: center;
         line-height: $font__line-height-body;
+        font-size: $font-xlarge;
     }
 
     .large-social-media {
