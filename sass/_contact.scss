@@ -63,8 +63,12 @@
 .contact-form {
     border: 3px solid $color__text-color-dark-grey;
     padding: $padding;
-    font-size: $font-small;
     text-align: left;
+
+    label {
+        text-transform: uppercase;
+        font-size: $font-xsmall;
+    }
 
     input, textarea {
         margin-top: $padding;
@@ -75,10 +79,12 @@
 
     input:not([type='submit']), textarea {
         width: 100%;
+        color: $color__text-color-dark-grey;
     }
 
     input:focus, textarea:focus {
-        outline: 1px solid $color__text-color-light-grey;
+        outline: 2px solid $color__text-color-light-grey;
+        box-shadow: none;
     }
 
     textarea {

@@ -169,8 +169,6 @@
     .about-container {
         padding: $margin;
         width: 55%;
-        ul {
-            font-size: $font-mediumlarge;
-        }
+        margin-bottom: $margin*3;
     }
 }
