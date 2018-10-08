@@ -337,7 +337,7 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
   .work-page .project-container .short-description { font-size: 1rem; }
   .summary-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
   .summary-container .left-block { width: 45%; border-right: 2px solid lightgrey; }
-  .summary-container .right-block { width: 50%; margin-top: 48px; }
+  .summary-container .right-block { width: 50%; margin-top: 2%; }
   footer p, footer a { font-size: 14px; }
   .site-footer .social-links a { padding-left: 45px; } }
 
