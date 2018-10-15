@@ -1,0 +1,24 @@
+
+// header styles
+.site-header {
+    display: flex;
+    position: relative;
+    margin: $margin auto;
+   
+    .menu-toggle, .site-branding {
+        flex: 1;
+    }
+
+    .site-title a {
+        @include plain-link;
+        font-family: $font__header;
+        font-size: $font-xlarge;
+        color: $color__text-color-dark-grey;
+        padding: $padding 0;
+        transition: all 300ms ease;
+    }
+
+    .site-title a:hover {
+        color: $color__text-color-light-grey;
+    }
+}

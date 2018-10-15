@@ -98,7 +98,8 @@
 			if(function_exists('get_field')){
 				if(have_rows('portfolio_content')){
 					?>
-					<div class="portfolio-content-block">	
+					<div class="portfolio-content-background">
+						<div class="portfolio-content">	
 					<?php
 					while(have_rows('portfolio_content')){
 						the_row();
@@ -116,25 +117,39 @@
 							$images = get_sub_field('image_gallery');
 							if($images){
 								foreach($images as $image){
-									echo '<img src="'. $image['url'] .'" alt="'. $image['alt'] .'">';
+									?>
+									<div class="design-container">
+										<img class="shadow screenshot" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></img>
+									</div><!-- .design-container -->	
+									<?php
+									//echo '<img class="shadow" src="'. $image['url'] .'" alt="'. $image['alt'] .'">';
 								}
 							}
 						} elseif(get_row_layout() == 'colours'){
 							if(have_rows('colour_palette')){
+								?>
+								<div class="colour-palette-container">
+								<?php
 								while(have_rows('colour_palette')){
 									the_row();
 									$hex_code = get_sub_field('hex_code');
 									$colour_image = get_sub_field('colour_circle');
 									?>
-									<p class="hex"><?php $hex_code; ?></p>
-									<img src="<?php echo $colour_image ?>" class="colour-circle"></img>
-									<?php
+										<div class="each-palette">
+											<p class="hex"><?php echo $hex_code; ?></p>
+											<img class="colour-circle" src="<?php echo $colour_image ?>"></img>
+										</div><!-- .each-palette -->
+										<?php
 								}
+								?>
+								</div><!-- .colour-palette-container -->
+								<?php
 							}
 						}// end the last elseif
 					} // end of while loop
 					?>
-					</div> <!-- end of portfolio-content-block -->
+					</div> <!-- .portfolio-content -->
+					</div> <!-- end of portfolio-content-background -->
 					<?php
 				}
 			}

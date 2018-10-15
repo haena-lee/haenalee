@@ -222,15 +222,7 @@ textarea { width: 100%; }
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
-.site { width: 100%; min-height: 96vh; margin-top: 0; background-color: white; position: relative; }
-
-.site-header { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 30px; position: relative; }
+.site-header { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; margin: 30px auto; }
 
 .site-header .menu-toggle, .site-header .site-branding { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
@@ -238,7 +230,27 @@ textarea { width: 100%; }
 
 .site-header .site-title a:hover { color: #919191; }
 
-.content-area { margin: 0 30px; }
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); margin: 30px auto; color: #4f515c; font-family: "brandon-grotesque", Arial, sans-serif; text-transform: uppercase; font-size: 12px; font-weight: 500; text-align: center; }
+
+.site-footer .social-links a { text-decoration: none; text-transform: uppercase; padding: 7.5px; color: #4f515c; -webkit-transition: all 300ms ease; transition: all 300ms ease; height: 20px; line-height: 20px; display: inline-block; vertical-align: middle; }
+
+.site-footer .social-links a:hover { color: #fa6a5d; }
+
+.site-footer::before { border-top: 2px solid #ebebeb; width: 50px; margin: 30px auto; }
+
+.site-info { margin: 0 auto; }
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.site { width: 100%; min-height: 96vh; margin-top: 0; background-color: white; position: relative; }
+
+.site-header { max-width: 270px; }
+
+.content-area { margin: 0 auto; max-width: 270px; }
 
 .content-area .entry-content p { color: #4f515c; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 2rem; font-weight: 500; line-height: 1.2; }
 
@@ -266,7 +278,9 @@ textarea { width: 100%; }
 
 .single-work-container { margin-top: 30px; color: #4f515c; }
 
-.single-work-container .summary-container { margin: 30px; }
+.single-work-container .long-description p { margin: 15px auto; font-family: "Roboto", Arial, sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; }
+
+.single-work-container .summary-container { margin: 30px auto; max-width: 260px; }
 
 .single-work-container .project-thumbnail { position: relative; }
 
@@ -286,40 +300,47 @@ textarea { width: 100%; }
 
 .single-work-container .tools-used .each-tool { min-width: 120px; font-family: "brandon-grotesque", Arial, sans-serif; text-transform: uppercase; font-size: 14px; font-weight: 500; color: #919191; margin: 8px 0; }
 
-.single-work-container .long-description p { margin: 15px auto; font-family: "Roboto", Arial, sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; }
+.portfolio-content-background { background-color: #f0f0f0; width: 100%; padding: 15px 0 90px 0; margin-bottom: 150px; }
 
-.portfolio-content-block { background-color: #f0f0f0; margin: 60px auto 200px auto; padding: 30px 0 60px 0; text-align: center; }
+.portfolio-content { margin: 0 auto; max-width: 270px; text-align: center; }
 
-.portfolio-content-block h4 { margin: 60px auto; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; text-transform: uppercase; text-align: center; }
+.portfolio-content h4 { margin: 90px auto 30px auto; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; text-transform: uppercase; text-align: center; }
 
-.portfolio-content-block h4::after { content: ""; display: block; margin: 15px auto 30px; width: 45px; height: 3px; background-color: #ce4235; }
+.portfolio-content h4::after { content: ""; display: block; margin: 15px auto 30px; width: 45px; height: 3px; background-color: #ce4235; }
 
-.portfolio-content-block p { font-family: "Roboto", Arial, sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; margin: 30px; text-align: left; }
+.portfolio-content h4:first-child { margin-top: 30px; }
 
-.portfolio-content-block img { margin: 15px auto; -webkit-box-shadow: 3px 3px 2px #b3b3b3; box-shadow: 3px 3px 2px #b3b3b3; }
+.portfolio-content p { font-family: "Roboto", Arial, sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; text-align: left; max-width: 1000px; margin: 0 auto; }
 
-.portfolio-content-block img.colour-circle { -webkit-box-shadow: unset; box-shadow: unset; }
+.portfolio-content img.shadow { margin: 15px auto; -webkit-box-shadow: 3px 3px 2px #b3b3b3; box-shadow: 3px 3px 2px #b3b3b3; }
 
-footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+.design-container { max-width: 1300px; margin: 30px auto; }
 
-.site-footer::before { border-top: 2px solid #ebebeb; width: 50px; margin: 30px auto; }
+.each-palette .hex { font-family: "brandon-grotesque", Arial, sans-serif; text-transform: uppercase; font-weight: 700; text-align: center; margin-bottom: 10px; }
 
-.site-footer { color: #4f515c; font-family: "brandon-grotesque", Arial, sans-serif; text-transform: uppercase; font-size: 12px; font-weight: 500; text-align: center; margin-bottom: 30px; }
+.colour-circle { width: 120px; }
 
-.site-footer .social-links a { text-decoration: none; text-transform: uppercase; padding: 7.5px; color: #4f515c; -webkit-transition: all 300ms ease; transition: all 300ms ease; height: 20px; line-height: 20px; display: inline-block; vertical-align: middle; }
+@media screen and (min-width: 380px) { .site-header, .content-area, .portfolio-content, .summary-container, .site-info { max-width: 90%; } }
 
-.site-footer .social-links a:hover { color: #fa6a5d; }
+@media screen and (min-width: 420px) { .site-header, .content-area, .portfolio-content, .summary-container, .site-info { max-width: 88%; } }
 
 @media screen and (min-width: 530px) { .project-container .description-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
   .project-container .project-link { margin-top: 0; }
   .site-footer { margin-bottom: 0; }
-  .site-info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; max-width: 80%; margin: 30px auto; }
+  .site-info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 30px auto; }
   .social-links { display: -webkit-box; display: -ms-flexbox; display: flex; text-align: center; max-width: 500px; } }
 
-@media screen and (min-width: 635px) { .site-header, .content-area, .summary-container, .portfolio-content-block p { padding: 15px; }
-  .content-area { margin-bottom: 100px; } }
+@media screen and (min-width: 635px) { .site-header, .content-area, .summary-container, .portfolio-content p { padding-top: 15px; }
+  .content-area { margin-bottom: 100px; }
+  .colour-palette-container { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 0 auto; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .each-palette { margin: 15px; }
+  .colour-circle { width: 110px; } }
 
-@media screen and (min-width: 710px) { .summary-container .entry-title { font-size: 1.6rem; }
+@media screen and (min-width: 880px) { .each-palette { margin: 15px 30px; }
+  .colour-circle { width: 150px; } }
+
+@media screen and (min-width: 710px) { .site-header, .content-area, .portfolio-content, .site-info { max-width: 80%; }
+  .summary-container .entry-title { font-size: 1.6rem; }
   .single-work-container .portfolio-content-block h4 { font-size: 1.3rem; }
   .project-container .project-link a { font-size: 14px; padding: 10px 30px; } }
 
@@ -329,8 +350,8 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
   .single-work-container .view-live a { position: absolute; right: 30px; bottom: 30px; text-decoration: none; text-transform: uppercase; font-size: 14px; padding: 10px 30px; } }
 
 @media screen and (min-width: 1020px) { .site-header { max-width: 80%; margin-left: auto; margin-right: auto; }
-  .project-intro-container { margin: auto 10%; padding: 0 15px; }
-  .project-intro-container .summary-container { margin: 60px 0; padding: 0; }
+  .project-intro-container { margin: auto 10%; }
+  .project-intro-container .summary-container { margin: 60px 0; padding: 0; max-width: 100%; }
   .content-area { max-width: 80%; margin: 0 auto 150px auto; }
   .work-page { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
   .work-page .project-container { max-width: 45%; margin: 2.5% 0 10% 0; }
@@ -339,7 +360,7 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
   .work-page .project-container .project-link { margin-top: 30px; }
   .work-page .project-container .entry-title { font-size: 1.1rem; }
   .work-page .project-container .short-description { font-size: 1rem; }
-  .summary-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+  .summary-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; max-width: 100%; }
   .summary-container .left-block { width: 45%; border-right: 2px solid lightgrey; }
   .summary-container .right-block { width: 50%; margin-top: 2%; }
   footer p, footer a { font-size: 14px; }
@@ -350,7 +371,7 @@ footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transf
   .work-page .project-container .project-link { margin-top: 0; }
   .work-page .project-container .project-link a { font-size: 14px; padding: 10px 30px; } }
 
-@media screen and (min-width: 1748px) { .project-intro-container { max-width: 80%; margin: auto; padding: 15px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+@media screen and (min-width: 1748px) { .project-intro-container { max-width: 80%; margin: auto; margin-bottom: 60px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
   .project-intro-container .project-thumbnail { width: 45%; }
   .project-intro-container .project-thumbnail .view-live a { bottom: 45px; right: 30px; }
   .project-intro-container .summary-container { width: 52%; height: 0; padding: 45px; padding-bottom: 26.5%; margin: 0 0 auto auto; border: 4px solid #4f515c; }
