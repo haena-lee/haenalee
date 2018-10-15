@@ -288,13 +288,17 @@ textarea { width: 100%; }
 
 .single-work-container .long-description p { margin: 15px auto; font-family: "Roboto", Arial, sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; }
 
-.single-work-container .portfolio-content-block { background-color: #f0f0f0; margin: 60px auto 200px auto; padding: 30px 0 60px 0; }
+.portfolio-content-block { background-color: #f0f0f0; margin: 60px auto 200px auto; padding: 30px 0 60px 0; text-align: center; }
 
-.single-work-container .portfolio-content-block h4 { margin: 60px auto; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; text-transform: uppercase; text-align: center; }
+.portfolio-content-block h4 { margin: 60px auto; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; text-transform: uppercase; text-align: center; }
 
-.single-work-container .portfolio-content-block h4::after { content: ""; display: block; margin: 15px auto 30px; width: 45px; height: 3px; background-color: #ce4235; }
+.portfolio-content-block h4::after { content: ""; display: block; margin: 15px auto 30px; width: 45px; height: 3px; background-color: #ce4235; }
 
-.single-work-container .portfolio-content-block p { font-family: "Roboto", Arial, sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; margin: 30px; }
+.portfolio-content-block p { font-family: "Roboto", Arial, sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; margin: 30px; text-align: left; }
+
+.portfolio-content-block img { margin: 15px auto; -webkit-box-shadow: 3px 3px 2px #b3b3b3; box-shadow: 3px 3px 2px #b3b3b3; }
+
+.portfolio-content-block img.colour-circle { -webkit-box-shadow: unset; box-shadow: unset; }
 
 footer { position: absolute; bottom: 0px; width: 100%; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 

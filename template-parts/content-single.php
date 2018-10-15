@@ -110,7 +110,7 @@
 						} elseif(get_row_layout() == 'text_content'){
 							$content = get_sub_field('content');
 							?>
-							<p><?php echo $content; ?></p>;
+							<p><?php echo $content; ?></p>
 							<?php
 						} elseif(get_row_layout() == 'images'){
 							$images = get_sub_field('image_gallery');
@@ -119,7 +119,19 @@
 									echo '<img src="'. $image['url'] .'" alt="'. $image['alt'] .'">';
 								}
 							}
-						} // end the last elseif
+						} elseif(get_row_layout() == 'colours'){
+							if(have_rows('colour_palette')){
+								while(have_rows('colour_palette')){
+									the_row();
+									$hex_code = get_sub_field('hex_code');
+									$colour_image = get_sub_field('colour_circle');
+									?>
+									<p class="hex"><?php $hex_code; ?></p>
+									<img src="<?php echo $colour_image ?>" class="colour-circle"></img>
+									<?php
+								}
+							}
+						}// end the last elseif
 					} // end of while loop
 					?>
 					</div> <!-- end of portfolio-content-block -->
