@@ -102,7 +102,7 @@
     color: $color__text-color-dark-grey;
 
     .long-description p {
-        margin: $padding auto;
+        margin: $padding/2 auto;
         font-family: $font__body;
         font-size: $font-small;
         font-weight: 400;
@@ -227,7 +227,7 @@
 }
 
 .screenshot {
-    margin: $margin*2 auto $margin auto;
+    margin: $margin auto $margin*2 auto;
 }
 
 .shadow {
@@ -255,6 +255,37 @@
 .small-image {
     margin: $padding auto;
 }
+
+.related-work {
+    display: flex;
+    justify-content: space-between;
+    margin: $margin*3 auto $padding auto;
+    
+    a {
+        font-family: $font__header;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: $font-xsmall;
+        color: $color__text-color-dark-grey;
+        padding: 8px;
+        transition: all 300ms ease;
+    }
+
+    a:hover {
+        color: $color__orange-highlight;
+    }
+
+    .next, .previous {
+        line-height: 2.5;
+    }
+
+    svg {
+        color: $color__orange-highlight;
+        vertical-align: middle;
+    }
+}
+
 
 @media screen and (min-width: 380px) {
     .site-header,
@@ -371,6 +402,10 @@
 
 }
 
+.related-work a {
+    font-size: $font-medium;
+}
+
 @media screen and (min-width: $size__tablet-landscape) {
     .site-header .site-title a {
         font-size: $font-xxlarge;
@@ -420,6 +455,7 @@
     }
 
 }
+
 
 @media screen and (min-width: $size__desktop-regular) {
     .site-header {
@@ -562,7 +598,7 @@
             }
             .right-block {
                 width: 55%;
-                margin-top: $margin;
+                margin-top: 0;
             }
         }
     }

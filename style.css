@@ -278,7 +278,7 @@ textarea { width: 100%; }
 
 .single-work-container { margin-top: 30px; color: #4f515c; }
 
-.single-work-container .long-description p { margin: 15px auto; font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.8; }
+.single-work-container .long-description p { margin: 7.5px auto; font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.7; }
 
 .single-work-container .summary-container { margin: 30px auto; max-width: 260px; }
 
@@ -310,9 +310,9 @@ textarea { width: 100%; }
 
 .portfolio-content h4:first-child { margin-top: 30px; }
 
-.portfolio-content p { font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.8; text-align: left; max-width: 800px; margin: 0 auto; }
+.portfolio-content p { font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.7; text-align: left; max-width: 800px; margin: 0 auto; }
 
-.screenshot { margin: 60px auto 30px auto; }
+.screenshot { margin: 30px auto 60px auto; }
 
 .shadow { border-radius: 10px; -webkit-filter: drop-shadow(3px 3px 2px #adadad); filter: drop-shadow(3px 3px 2px #adadad); }
 
@@ -323,6 +323,16 @@ textarea { width: 100%; }
 .colour-circle { width: 120px; }
 
 .small-image { margin: 15px auto; }
+
+.related-work { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 90px auto 15px auto; }
+
+.related-work a { font-family: "brandon-grotesque", Arial, sans-serif; text-transform: uppercase; text-decoration: none; font-weight: 800; font-size: 14px; color: #4f515c; padding: 8px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+
+.related-work a:hover { color: #ce4235; }
+
+.related-work .next, .related-work .previous { line-height: 2.5; }
+
+.related-work svg { color: #ce4235; vertical-align: middle; }
 
 @media screen and (min-width: 380px) { .site-header, .content-area, .portfolio-content, .summary-container, .site-info { max-width: 90%; }
   .small-image { max-width: 80%; margin-bottom: 60px; } }
@@ -346,6 +356,8 @@ textarea { width: 100%; }
   .summary-container .entry-title { font-size: 1.6rem; }
   .single-work-container .portfolio-content-block h4 { font-size: 1.3rem; }
   .project-container .project-link a { font-size: 14px; padding: 10px 30px; } }
+
+.related-work a { font-size: 1.1rem; }
 
 @media screen and (min-width: 880px) { .site-header .site-title a { font-size: 2.3rem; }
   .content-area .entry-content { max-width: 670px; margin: 0 auto; text-align: center; }
@@ -387,7 +399,7 @@ textarea { width: 100%; }
   .project-intro-container .summary-container { width: 52%; height: 0; padding: 45px; padding-bottom: 26.5%; margin: 0 0 auto auto; border: 4px solid #4f515c; }
   .project-intro-container .summary-container .tools-used { margin: 30px 0; }
   .project-intro-container .summary-container .left-block { width: 40%; }
-  .project-intro-container .summary-container .right-block { width: 55%; margin-top: 30px; }
+  .project-intro-container .summary-container .right-block { width: 55%; margin-top: 0; }
   .screenshot { display: block; } }
 
 /*--------------------------------------------------------------
@@ -397,7 +409,7 @@ textarea { width: 100%; }
 
 .entry-header-about::after { content: ""; display: block; margin: 15px 0 30px 0; width: 60px; height: 3px; background-color: #ce4235; }
 
-.entry-content-about { color: #4f515c; font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.8; margin: 30px auto; }
+.entry-content-about { color: #4f515c; font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.7; margin: 30px auto; }
 
 .about-cta-button { margin: 30px 0; }
 
@@ -496,7 +508,7 @@ span.wpcf7-not-valid-tip { color: #ce4235; }
 
 @media screen and (min-width: 1162px) { .contact-text { font-size: 2rem; } }
 
-@media screen and (min-width: 1480px) { .contact-text { text-align: center; line-height: 1.8; font-size: 2rem; }
+@media screen and (min-width: 1480px) { .contact-text { text-align: center; line-height: 1.7; font-size: 2rem; }
   .large-social-media { margin-left: auto; margin-right: auto; }
   .contact-form { width: 600px; } }
 

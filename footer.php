@@ -18,11 +18,6 @@
 			<div class="copyright">
 				<p>&copy; Haena Lee | 2018</p>
 			</div><!-- .copyright -->
-			<!-- <div class="social-links">
-				<a href="https://www.instagram.com/haenaleedesign/" target="_blank">Instagram</a>
-				<a href="https://twitter.com/haenaleedesign" target="_blank">Twitter</a>
-				<a href="https://www.linkedin.com/in/haena-lee-profile/" target="_blank">LinkedIn</a>
-			</div> .social-links -->
 
 			<div class="social-links">
 			<?php

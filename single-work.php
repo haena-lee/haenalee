@@ -19,15 +19,10 @@ get_header();
 
 			get_template_part( 'template-parts/content-single', get_post_type() );
 
-			// $terms = get_terms(array(
-			// 	'taxonomy' => 'tools-used',
-			// 	'hide_empty' => false,
-			// ));
-
 			?>
 			<div class="related-projects">
 				<?php
-				// the_post_navigation();
+				//he_post_navigation();
 				?>
 			</div><!-- .related-projects -->
 			<?php
