@@ -104,6 +104,8 @@
 					while(have_rows('portfolio_content')){
 						the_row();
 						if(get_row_layout() == 'text_title'){
+							?>
+							<?php
 							$title = get_sub_field('title');
 							?>
 							<h4><?php echo $title; ?></h4>
@@ -114,16 +116,34 @@
 							<p><?php echo $content; ?></p>
 							<?php
 						} elseif(get_row_layout() == 'images'){
+							?>
+							<?php
 							$images = get_sub_field('image_gallery');
 							if($images){
 								foreach($images as $image){
 									?>
-									<div class="design-container">
-										<img class="shadow screenshot" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></img>
-									</div><!-- .design-container -->	
+									<img class="shadow screenshot" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></img>
 									<?php
-									//echo '<img class="shadow" src="'. $image['url'] .'" alt="'. $image['alt'] .'">';
 								}
+							}
+							?>
+							<?php
+						} elseif(get_row_layout() == "small_images"){
+							$small_images = get_sub_field('small_image_gallery');
+							if($small_images){
+								?>
+								<div class="responsive-content">
+									<?php
+								foreach($small_images as $small_image){
+									?>
+									<div class="each-small-image">
+										<img class="shadow small-image" src="<?php echo $small_image['url']; ?>" alt="<?php echo $small_image['alt']; ?>"></img>
+									</div><!-- .each-small-image -->
+									<?php
+								}
+								?>
+								</div><!-- .responsive-content -->
+								<?php
 							}
 						} elseif(get_row_layout() == 'colours'){
 							if(have_rows('colour_palette')){

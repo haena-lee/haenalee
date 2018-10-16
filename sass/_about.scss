@@ -60,6 +60,7 @@
 .about-container {
     background-color: $color__background-screen;
     padding: $margin $padding;
+    margin-top: $margin;
     margin-bottom: $margin*2;
     box-shadow: 40px 40px 0 -36px $color__orange-highlight;
     width: 90%;
@@ -77,7 +78,7 @@
         margin: 0;
         padding-left: $padding;
         font-family: $font__header;
-        font-size: $font-xsmall;
+        font-size: $font-small;
         font-weight: 500;
         line-height: $font__line-height-list;
     }
