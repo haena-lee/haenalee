@@ -184,7 +184,7 @@ textarea { width: 100%; }
 /* Small menu. */
 .menu-toggle { display: block; cursor: pointer; position: absolute; top: 27px; right: 0; background-color: transparent; border: none; width: 28px; height: 28px; outline: none; }
 
-.menu-toggle .bar { display: block; position: absolute; left: 0; border-top: 2px solid #4f515c; width: 100%; -webkit-transition: 300ms; transition: 300ms; }
+.menu-toggle .bar { display: block; position: absolute; left: 0; border-top: 3px solid #4f515c; width: 100%; -webkit-transition: 300ms; transition: 300ms; }
 
 .menu-toggle .bar-top { top: 0; }
 
@@ -192,7 +192,9 @@ textarea { width: 100%; }
 
 .menu-toggle .bar-bottom { top: 20px; }
 
-.main-navigation.toggled { outline: none; }
+.main-navigation { -webkit-transition: all 400ms ease; transition: all 400ms ease; }
+
+.main-navigation.toggled { outline: none; margin-bottom: 250px; -webkit-transition: all 400ms ease; transition: all 400ms ease; }
 
 .main-navigation.toggled .bar-top { top: 10px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
@@ -206,7 +208,11 @@ textarea { width: 100%; }
 
 .main-navigation.toggled ul { display: block; position: absolute; top: 100px; right: 0; text-align: right; z-index: 999; }
 
-.main-navigation.toggled ul li { margin-bottom: 15px; }
+.main-navigation.toggled ul li { margin-bottom: 45px; }
+
+.main-navigation.toggled ul a { font-size: 1.1rem; padding: 0 0 0 15px; }
+
+.main-navigation.toggled ul a:hover { border-left: 3px solid #ce4235; }
 
 @media screen and (min-width: 635px) { .menu-toggle { display: none; }
   .main-navigation ul { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 30px; }
@@ -215,7 +221,7 @@ textarea { width: 100%; }
   .main-navigation ul li a:after { content: ''; position: absolute; width: 0; height: 3px; margin-top: 5px; bottom: 0; left: 0; background-color: #ce4235; -webkit-transition: width 300ms ease; transition: width 300ms ease; }
   .main-navigation ul li a:hover:after { width: 100%; background-color: #ce4235; } }
 
-@media screen and (min-width: 880px) { .main-navigation ul li a { margin-left: 15px; padding: 7.5px 0; } }
+@media screen and (min-width: 880px) { .main-navigation ul li a { margin-left: 15px; padding: 7.5px 0; font-weight: 700; } }
 
 @media screen and (min-width: 1020px) { .main-navigation ul li a { margin-left: 45px; } }
 

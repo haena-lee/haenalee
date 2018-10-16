@@ -22,7 +22,7 @@
         display: block;
         position: absolute;
         left: 0;
-        border-top: 2px solid $color__text-color-dark-grey;
+        border-top: 3px solid $color__text-color-dark-grey;
         width: 100%;
         transition: 300ms;   
     }
@@ -41,8 +41,14 @@
 
 }
 
+.main-navigation {
+	transition: all 400ms ease;
+}
+
 .main-navigation.toggled {
 	outline: none;
+	margin-bottom: 250px;
+	transition: all 400ms ease;
 
 	.bar-top {
         top: 10px;
@@ -80,7 +86,16 @@
 	z-index: 999;
 
 	li {
-		margin-bottom: $padding;
+		margin-bottom: $padding*3;
+	}
+
+	a {
+		font-size: $font-medium;
+		padding: 0 0 0 $padding;
+	}
+
+	a:hover {
+		border-left: 3px solid $color__orange-highlight;
 	}
 }
 
@@ -130,6 +145,7 @@
 	.main-navigation ul li a {
 		margin-left: $padding;
 		padding: $padding/2 0;
+		font-weight: 700;
 	}
 }
 
