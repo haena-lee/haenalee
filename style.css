@@ -409,7 +409,7 @@ a:hover img { opacity: 0.7; }
   .work-page .project-container .project-link a { font-size: 14px; padding: 10px 30px; } }
 
 @media screen and (min-width: 1748px) { .project-intro-container { max-width: 80%; margin: auto; margin-bottom: 60px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
-  .project-intro-container .project-thumbnail { width: 45%; }
+  .project-intro-container .project-thumbnail { width: 45%; background-color: transparent; }
   .project-intro-container .project-thumbnail .view-live a { bottom: 45px; right: 30px; }
   .project-intro-container .summary-container { width: 52%; height: 0; padding: 45px; padding-bottom: 26.5%; margin: 0 0 auto auto; border: 4px solid #4f515c; }
   .project-intro-container .summary-container .tools-used { margin: 30px 0; }
