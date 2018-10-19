@@ -210,7 +210,7 @@ a:hover {
     text-align: center;
     
     h4 {
-        margin: $margin*2 auto $margin auto;
+        margin: $margin auto;
         font-family: $font__header;
         font-size: $font-medium;
         text-transform: uppercase;
@@ -233,12 +233,12 @@ a:hover {
         line-height: $font__line-height-body;
         text-align: left;
         max-width: 800px;
-        margin: $margin auto;
+        margin: $margin auto $margin*2 auto;
     }
 }
 
 .screenshot {
-    margin: $margin auto $margin*2 auto;
+    margin: $margin*3 auto;
 }
 
 .shadow {

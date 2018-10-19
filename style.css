@@ -322,13 +322,13 @@ a:hover img { opacity: 0.7; }
 
 .portfolio-content { margin: 0 auto; max-width: 270px; text-align: center; }
 
-.portfolio-content h4 { margin: 60px auto 30px auto; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; text-transform: uppercase; text-align: center; }
+.portfolio-content h4 { margin: 30px auto; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; text-transform: uppercase; text-align: center; }
 
 .portfolio-content h4::after { content: ""; display: block; margin: 15px auto 30px; width: 45px; height: 3px; background-color: #ce4235; }
 
-.portfolio-content p { font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.7; text-align: left; max-width: 800px; margin: 30px auto; }
+.portfolio-content p { font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.7; text-align: left; max-width: 800px; margin: 30px auto 60px auto; }
 
-.screenshot { margin: 30px auto 60px auto; }
+.screenshot { margin: 90px auto; }
 
 .shadow { border-radius: 10px; -webkit-filter: drop-shadow(3px 3px 2px #adadad); filter: drop-shadow(3px 3px 2px #adadad); }
 
