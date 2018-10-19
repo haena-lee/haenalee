@@ -230,7 +230,7 @@ textarea { width: 100%; }
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.site-header { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; margin: 30px auto; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.site-header { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; margin: 30px auto; }
 
 .site-header .menu-toggle, .site-header .site-branding { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
@@ -239,6 +239,8 @@ textarea { width: 100%; }
 .site-header .site-title a:hover { background-size: 100% 3px, auto; }
 
 .site-header .site-title a:hover { color: #919191; }
+
+@media screen and (min-width: 635px) { .site-header { -webkit-box-align: center; -ms-flex-align: center; align-items: center; } }
 
 /*--------------------------------------------------------------
 # Footer

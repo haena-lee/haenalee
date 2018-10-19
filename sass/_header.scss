@@ -4,7 +4,6 @@
     display: flex;
     position: relative;
     margin: $margin auto;
-    align-items: center;
    
     .menu-toggle, .site-branding {
         flex: 1;
@@ -37,5 +36,12 @@
 
     .site-title a:hover {
         color: $color__text-color-light-grey;
+    }
+}
+
+
+@media screen and (min-width: $size__phone-landscape) {
+    .site-header {
+        align-items: center;
     }
 }
