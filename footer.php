@@ -12,7 +12,7 @@
 ?>
 
 	</div><!-- #content -->
-
+	<a href="#" class="scrollup"><i class="fas fa-angle-up fa-2x"></i></a>
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<div class="copyright">

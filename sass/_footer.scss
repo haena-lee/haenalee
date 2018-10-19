@@ -41,3 +41,12 @@
 .site-info {
     margin: 0 auto;
 }
+
+.scrollup {
+    display: none;
+    position: fixed;
+    right: 5%;
+    bottom: 4%;
+    padding: 8px;
+    color: $color__orange-highlight;
+}

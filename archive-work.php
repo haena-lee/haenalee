@@ -22,8 +22,12 @@ get_header();
 			while ( have_posts() ) :
 				?>
 				<div class="project-container">
+					<div class="image-container">
+						<?php
+						the_post();
+						?>
+					</div>
 					<?php
-					the_post();
 
 					/*
 					* Include the Post-Type-specific template for the content.
