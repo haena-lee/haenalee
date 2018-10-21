@@ -259,7 +259,9 @@ textarea { width: 100%; }
 
 .scrollup { display: none; position: fixed; right: 5%; bottom: 4%; padding: 8px; color: #ce4235; z-index: 999; }
 
-svg { stroke: #ce4235; stroke-width: 2px; }
+svg { stroke: #ce4235; stroke-width: 2px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+
+.scrollup:hover svg { stroke: #fa6a5d; }
 
 /*--------------------------------------------------------------
 # Layout
@@ -451,7 +453,7 @@ a:hover img { opacity: 0.7; }
 
 .about-container h4 { margin-top: 0; font-family: "brandon-grotesque", Arial, sans-serif; text-transform: uppercase; font-size: 1.1rem; font-weight: 600; }
 
-.about-container ul { list-style: none; margin: 0; padding-left: 15px; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 2; }
+.about-container ul { list-style: none; margin: 0; padding-left: 15px; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1rem; font-weight: 500; line-height: 2; }
 
 .about-container .fa-angle-right { color: #919191; }
 
@@ -460,7 +462,7 @@ a:hover img { opacity: 0.7; }
 .about-container:nth-child(even) { -webkit-box-shadow: 40px 40px 0 -37px #ce4235; box-shadow: 40px 40px 0 -37px #ce4235; text-align: right; margin-left: auto; margin-right: 0; }
 
 @media screen and (min-width: 530px) { .about-container { width: 80%; padding: 30px 15px; }
-  .about-container ul { padding-left: 30px; font-size: 1.1rem; } }
+  .about-container ul { padding-left: 30px; font-size: 1.2rem; } }
 
 @media screen and (min-width: 880px) { .flex-content-about { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
   .about-picture { display: none; }
@@ -470,8 +472,8 @@ a:hover img { opacity: 0.7; }
   .about-container { width: 70%; padding: 30px; } }
 
 @media screen and (min-width: 1020px) { .about-container { width: 60%; }
-  .about-container h4 { font-size: 1.1rem; }
-  .about-container ul { font-size: 1.1rem; } }
+  .about-container h4 { font-size: 1.3rem; }
+  .about-container ul { font-size: 1.3rem; } }
 
 @media screen and (min-width: 1480px) { .flex-content-about { margin-bottom: -60px; }
   .about-container { padding: 30px; width: 55%; margin-bottom: 90px; } }

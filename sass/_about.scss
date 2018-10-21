@@ -78,7 +78,7 @@
         margin: 0;
         padding-left: $padding;
         font-family: $font__header;
-        font-size: $font-small;
+        font-size: 1rem;
         font-weight: 500;
         line-height: $font__line-height-list;
     }
@@ -106,7 +106,7 @@
 
         ul {
             padding-left: $margin;
-            font-size: $font-small;
+            font-size: 1.2rem;
         }
     }
 }
@@ -132,7 +132,6 @@
     .about-content {
         max-width: 800px;
         padding-right: $margin;
-        //font-size: $font-medium;
     }
 
     .about-cta-button {
@@ -152,10 +151,10 @@
     .about-container {
         width: 60%;
         h4 {
-            font-size: $font-medium;
+            font-size: 1.3rem;
         }
         ul {
-            font-size: $font-medium;
+            font-size: 1.3rem;
         }
     }
 
