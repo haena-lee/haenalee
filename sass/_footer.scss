@@ -49,4 +49,10 @@
     bottom: 4%;
     padding: 8px;
     color: $color__orange-highlight;
+    z-index: 999;
+}
+
+svg {
+    stroke: $color__orange-highlight;
+    stroke-width: 2px;
 }

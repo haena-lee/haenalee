@@ -103,7 +103,6 @@
 					<?php
 					while(have_rows('portfolio_content')){
 						?>
-						<div class="each-block">
 						<?php
 						the_row();
 						if(get_row_layout() == 'text_title'){
@@ -170,7 +169,6 @@
 							}
 						}// end the last elseif
 						?>
-						</div><!-- .each-block -->
 						<?php
 					} // end of while loop
 					?>
@@ -181,6 +179,9 @@
 						// display previous post link and font awesome arrow if previous post exists
 						if(get_previous_post()){
 							echo '<i class="fas fa-arrow-left fa-lg"></i>';
+							?>
+
+							<?php
 							previous_post_link('%link');
 						};
 						?>

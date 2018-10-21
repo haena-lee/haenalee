@@ -77,6 +77,13 @@
 		color: $color__text-color-dark-grey;
 		font-weight: 600;
 	}
+
+	li.active {
+		a {
+			color: $color__text-color-light-grey;
+		}
+	}
+
 }
 
 .main-navigation.toggled ul {
@@ -112,7 +119,7 @@
 		margin-top: $margin;
 
 		li {
-			font-size: $font-small;
+			font-size: 17px;
 			margin-left: $margin;
 
 			a {
@@ -158,90 +165,3 @@
 }
 
 
-
-
-// .main-navigation {
-// 	clear: both;
-// 	display: block;
-// 	float: left;
-// 	width: 100%;
-
-// 	ul {
-// 		display: none;
-// 		list-style: none;
-// 		margin: 0;
-// 		padding-left: 0;
-// 		max-width: 100%;
-
-// 		ul {
-// 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-// 			float: left;
-// 			position: absolute;
-// 			top: 100%;
-// 			left: -999em;
-// 			z-index: 99999;
-
-// 			ul {
-// 				left: -999em;
-// 				top: 0;
-
-// 			}
-
-// 			li {
-// 				&:hover > ul,
-// 				&.focus > ul {
-// 					left: 100%;
-// 				}
-// 			}
-
-// 			a {
-// 				width: 80px;
-// 			}
-
-// 			:hover > a,
-// 			.focus > a {
-// 			}
-
-// 			a:hover,
-// 			a.focus {
-// 			}
-// 		}
-
-// 		li:hover > ul,
-// 		li.focus > ul {
-// 			left: auto;
-// 		}
-// 	}
-
-// 	li {
-// 		float: left;
-// 		position: relative;
-// 	}
-
-// 	a {
-// 		display: block;
-// 		text-decoration: none;
-// 	}
-
-// }
-
-// .comment-navigation,
-// .posts-navigation,
-// .post-navigation {
-
-// 	.site-main & {
-// 		margin: 0 0 1.5em;
-// 		overflow: hidden;
-// 	}
-
-// 	.nav-previous {
-// 		float: left;
-// 		width: 50%;
-// 	}
-
-// 	.nav-next {
-// 		float: right;
-// 		text-align: right;
-// 		width: 50%;
-// 	}
-// }

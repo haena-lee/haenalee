@@ -61,7 +61,7 @@
 }
 
 .contact-form {
-    border: 3px solid $color__text-color-dark-grey;
+    border: 3px solid #ebebeb;
     padding: $padding;
     text-align: left;
 
@@ -74,6 +74,7 @@
         margin-top: $padding;
         padding: 5px 2px 5px 8px;
         font-family: $font__body;
+        font-size: $font-small;
         border-radius: 0;
     }
 
@@ -96,7 +97,7 @@
     input[type=submit]{
         text-transform: uppercase;
         background-color: $color__orange-highlight;
-        padding: $padding/2 $padding*2;
+        padding: $padding $padding*3;
         font-size: $font-small;
         font-family: $font__header;
         font-weight: 500;
