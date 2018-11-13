@@ -28,12 +28,12 @@
 }
 
 .about-cta-button {
-    margin: $margin 0;
+    margin: -20px 0 $margin*3 0;
 }
 
 .about-cta-button a {
     font-family: $font__header;
-    font-size: $font-small;
+    font-size: 17px;
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
@@ -78,7 +78,7 @@
         margin: 0;
         padding-left: $padding;
         font-family: $font__header;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 500;
         line-height: $font__line-height-list;
     }
@@ -133,10 +133,6 @@
         max-width: 800px;
         padding-right: $margin;
     }
-
-    .about-cta-button {
-        margin-bottom: $margin*3;
-    }
         
     .about-container {
         width: 70%;
@@ -171,4 +167,9 @@
         width: 55%;
         margin-bottom: $margin*3;
     }
+
+    .about-cta-button {
+        margin-bottom: $margin*5;
+    }
+
 }

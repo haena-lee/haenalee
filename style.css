@@ -19,7 +19,28 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-/*-------------------------------------------------------------- >>> TABLE OF CONTENTS: ---------------------------------------------------------------- # Normalize # Typography # Elements # Forms # Navigation ## Links ## Menus # Accessibility # Alignments # Clearings # Widgets # Content ## Posts and pages ## Comments # Infinite scroll # Media ## Captions ## Galleries --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -259,7 +280,7 @@ textarea { width: 100%; }
 
 .scrollup { display: none; position: fixed; right: 5%; bottom: 4%; padding: 8px; color: #ce4235; z-index: 999; }
 
-svg { stroke: #ce4235; stroke-width: 2px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+svg { stroke: #ce4235; stroke-width: 3px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
 
 .scrollup:hover svg { stroke: #fa6a5d; }
 
@@ -276,7 +297,7 @@ svg { stroke: #ce4235; stroke-width: 2px; -webkit-transition: all 300ms ease; tr
 
 .content-area .entry-content .home-cta-text { margin-top: 30px; }
 
-.content-area .entry-content .home-cta-text a { text-decoration: none; text-transform: uppercase; background-color: #ce4235; padding: 7.5px 30px; font-size: 1.1rem; font-weight: 600; color: white; border-radius: 20px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+.content-area .entry-content .home-cta-text a { text-decoration: none; text-transform: uppercase; background-color: #ce4235; padding: 7.5px 30px; font-size: 17px; font-weight: 600; color: white; border-radius: 20px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
 
 .content-area .entry-content .home-cta-text a:hover { background-color: #fa6a5d; }
 
@@ -298,7 +319,7 @@ a:hover img { opacity: 0.7; }
 
 .project-container .project-link { font-family: "brandon-grotesque", Arial, sans-serif; font-size: 14px; font-weight: 500; margin-top: 30px; }
 
-.project-container .project-link a { text-decoration: none; text-transform: uppercase; padding: 7.5px 15px; color: white; background-color: #ce4235; border-radius: 30px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+.project-container .project-link a { text-decoration: none; text-transform: uppercase; padding: 10px 22.5px; color: white; background-color: #ce4235; border-radius: 30px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
 
 .project-container .project-link a:hover { background-color: #fa6a5d; }
 
@@ -310,7 +331,7 @@ a:hover img { opacity: 0.7; }
 
 .single-work-container .project-thumbnail { position: relative; }
 
-.single-work-container .view-live a { position: absolute; right: 15px; bottom: 15px; font-family: "brandon-grotesque", Arial, sans-serif; text-decoration: none; text-transform: uppercase; font-size: 12px; font-weight: 500; color: white; background-color: #ce4235; padding: 10px 22.5px; border-radius: 35px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+.single-work-container .view-live a { position: absolute; right: 15px; bottom: 15px; font-family: "brandon-grotesque", Arial, sans-serif; text-decoration: none; text-transform: uppercase; font-size: 14px; font-weight: 500; color: white; background-color: #ce4235; padding: 10px 22.5px; border-radius: 35px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
 
 .single-work-container .view-live a:hover { background-color: #fa6a5d; }
 
@@ -385,12 +406,13 @@ a:hover img { opacity: 0.7; }
 @media screen and (min-width: 710px) { .site-header, .content-area, .portfolio-content, .site-info { max-width: 80%; }
   .summary-container .entry-title { font-size: 1.6rem; }
   .single-work-container .portfolio-content-block h4 { font-size: 1.3rem; }
-  .project-container .project-link a { font-size: 14px; padding: 10px 30px; } }
+  .project-container .project-link a { padding: 10px 30px; }
+  .single-work-container .view-live a { padding: 10px 30px; } }
 
 @media screen and (min-width: 880px) { .site-header .site-title a { font-size: 2.4rem; }
   .content-area .entry-content { max-width: 670px; margin: 0 auto; text-align: center; }
   .content-area .entry-content p { font-size: 2.4rem; }
-  .single-work-container .view-live a { position: absolute; right: 30px; bottom: 30px; text-decoration: none; text-transform: uppercase; font-size: 14px; padding: 10px 30px; }
+  .single-work-container .view-live a { position: absolute; right: 30px; bottom: 30px; text-decoration: none; text-transform: uppercase; padding: 12.5px 30px; }
   .each-palette { margin: 15px 30px; }
   .colour-circle { width: 150px; }
   .portfolio-content h4 { margin: 120px auto 30px auto; }
@@ -439,9 +461,9 @@ a:hover img { opacity: 0.7; }
 
 .entry-content-about { color: #4f515c; font-family: "Roboto", Arial, sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.7; margin: 30px auto; }
 
-.about-cta-button { margin: 30px 0; }
+.about-cta-button { margin: -20px 0 90px 0; }
 
-.about-cta-button a { font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; text-decoration: none; color: white; background-color: #ce4235; padding: 7.5px 30px; border-radius: 20px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+.about-cta-button a { font-family: "brandon-grotesque", Arial, sans-serif; font-size: 17px; font-weight: 600; text-transform: uppercase; text-decoration: none; color: white; background-color: #ce4235; padding: 7.5px 30px; border-radius: 20px; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
 
 .about-cta-button a:hover { background-color: #fa6a5d; }
 
@@ -453,7 +475,7 @@ a:hover img { opacity: 0.7; }
 
 .about-container h4 { margin-top: 0; font-family: "brandon-grotesque", Arial, sans-serif; text-transform: uppercase; font-size: 1.1rem; font-weight: 600; }
 
-.about-container ul { list-style: none; margin: 0; padding-left: 15px; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1rem; font-weight: 500; line-height: 2; }
+.about-container ul { list-style: none; margin: 0; padding-left: 15px; font-family: "brandon-grotesque", Arial, sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 2; }
 
 .about-container .fa-angle-right { color: #919191; }
 
@@ -468,7 +490,6 @@ a:hover img { opacity: 0.7; }
   .about-picture { display: none; }
   .about-picture-float { display: block; padding-left: 30px; margin-top: 30px; }
   .about-content { max-width: 800px; padding-right: 30px; }
-  .about-cta-button { margin-bottom: 90px; }
   .about-container { width: 70%; padding: 30px; } }
 
 @media screen and (min-width: 1020px) { .about-container { width: 60%; }
@@ -476,7 +497,8 @@ a:hover img { opacity: 0.7; }
   .about-container ul { font-size: 1.3rem; } }
 
 @media screen and (min-width: 1480px) { .flex-content-about { margin-bottom: -60px; }
-  .about-container { padding: 30px; width: 55%; margin-bottom: 90px; } }
+  .about-container { padding: 30px; width: 55%; margin-bottom: 90px; }
+  .about-cta-button { margin-bottom: 150px; } }
 
 /*--------------------------------------------------------------
 # Contact
@@ -513,13 +535,13 @@ a:hover img { opacity: 0.7; }
 
 .contact-form textarea { padding-left: 8px; padding-top: 8px; font-family: "Roboto", Arial, sans-serif; }
 
-.contact-form input[type=submit] { text-transform: uppercase; background-color: #ce4235; padding: 15px 45px; font-size: 1.1rem; font-family: "brandon-grotesque", Arial, sans-serif; font-weight: 500; color: white; border: none; border-radius: 35px; cursor: pointer; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
+.contact-form input[type=submit] { text-transform: uppercase; background-color: #ce4235; padding: 10px 30px; font-size: 1.1rem; font-family: "brandon-grotesque", Arial, sans-serif; font-weight: 500; color: white; border: none; border-radius: 35px; cursor: pointer; -webkit-transition: all 300ms ease; transition: all 300ms ease; }
 
 .contact-form input[type=submit]:hover { background-color: #fa6a5d; }
 
-div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { padding: 15px; border: 2px solid #ce4235; }
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { padding: 15px; border: 2px solid #ce4235; font-size: 21px; }
 
-span.wpcf7-not-valid-tip { color: #ce4235; }
+span.wpcf7-not-valid-tip { color: #ce4235; font-weight: 500; padding-top: 15px; }
 
 @media screen and (min-width: 530px) { .contact-text { text-align: center; }
   .large-social-media { margin-left: auto; margin-right: auto; }

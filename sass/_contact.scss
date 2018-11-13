@@ -97,7 +97,7 @@
     input[type=submit]{
         text-transform: uppercase;
         background-color: $color__orange-highlight;
-        padding: $padding $padding*3;
+        padding: $margin/3 $padding*2;
         font-size: $font-small;
         font-family: $font__header;
         font-weight: 500;
@@ -116,10 +116,13 @@
 div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
     padding: $padding;
     border: 2px solid $color__orange-highlight;
+    font-size: 21px;
 }
 
 span.wpcf7-not-valid-tip {
     color: $color__orange-highlight;
+    font-weight: 500;
+    padding-top: $padding;
 }
 
 

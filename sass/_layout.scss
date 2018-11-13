@@ -32,7 +32,7 @@
             @include plain-link;
             background-color: $color__orange-highlight;
             padding: $padding/2 $padding*2;
-            font-size: $font-small;
+            font-size: 17px;
             font-weight: 600;
             color: white;
             border-radius: 20px;
@@ -92,13 +92,13 @@ a:hover {
 
     .project-link {
         font-family: $font__header;
-        font-size: $font-xsmall;
+        font-size: 14px;
         font-weight: 500;
         margin-top: $margin;
         
         a {
           @include plain-link;
-          padding: $padding/2 $padding;
+          padding: $padding/1.5 $padding*1.5;
           color: white;
           background-color: $color__orange-highlight;
           border-radius: 30px;
@@ -139,7 +139,7 @@ a:hover {
         bottom: $padding;
         font-family: $font__header;
         @include plain-link;
-        font-size: $font-xxsmall;
+        font-size: 14px;
         font-weight: 500;
         color: white;
         background-color: $color__orange-highlight;
@@ -424,8 +424,13 @@ a:hover {
     }
 
     .project-container .project-link a {
-        font-size: $font-xsmall;
         padding: $padding/1.5 $padding*2;
+    }
+
+    .single-work-container {
+        .view-live a {
+            padding: $padding/1.5 $padding*2;
+        }
     }
 
 }
@@ -452,8 +457,7 @@ a:hover {
             right: $margin;
             bottom: $margin;
             @include plain-link;
-            font-size: $font-xsmall;
-            padding: $padding/1.5 $padding*2;
+            padding: $padding/1.2 $padding*2;
         }
     }
 

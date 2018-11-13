@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 	<a href="#" class="scrollup">
-		<!-- <i class="fas fa-angle-up fa-2x"></i> -->
+		<span class="screen-reader-text">Back to top</span>
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="-2 -2 32.634 32.634" style="enable-background:new 0 0 32.634 32.634;" xml:space="preserve" width="25px" height="25px">
 <g>
 	<path d="M16.317,32.634c-0.276,0-0.5-0.224-0.5-0.5V0.5c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5v31.634   C16.817,32.41,16.594,32.634,16.317,32.634z" fill="#ce4235"/>
