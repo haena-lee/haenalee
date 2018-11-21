@@ -110,12 +110,12 @@
 							<?php
 							$title = get_sub_field('title');
 							?>
-							<h4><?php echo $title; ?></h4>
+							<h4 class="box" data-aos="fade-up"><?php echo $title; ?></h4>
 							<?php
 						} elseif(get_row_layout() == 'text_content'){
 							$content = get_sub_field('content');
 							?>
-							<p><?php echo $content; ?></p>
+							<p class="box" data-aos="fade-up"><?php echo $content; ?></p>
 							<?php
 						} elseif(get_row_layout() == 'images'){
 							?>
@@ -124,7 +124,7 @@
 							if($images){
 								foreach($images as $image){
 									?>
-									<img class="screenshot shadow" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></img>
+									<img class="screenshot shadow box" data-aos="fade-up" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></img>
 									<?php
 								}
 							}
@@ -134,12 +134,12 @@
 							$small_images = get_sub_field('small_image_gallery');
 							if($small_images){
 								?>
-								<div class="responsive-content">
+								<div class="responsive-content box" data-aos="fade-up">
 									<?php
 								foreach($small_images as $small_image){
 									?>
 									<div class="each-small-image">
-										<img class="small-image shadow" src="<?php echo $small_image['url']; ?>" alt="<?php echo $small_image['alt']; ?>"></img>
+										<img class="small-image shadow box" data-aos="fade-up" src="<?php echo $small_image['url']; ?>" alt="<?php echo $small_image['alt']; ?>"></img>
 									</div><!-- .each-small-image -->
 									<?php
 								}
@@ -150,14 +150,14 @@
 						} elseif(get_row_layout() == 'colours'){
 							if(have_rows('colour_palette')){
 								?>
-								<div class="colour-palette-container">
+								<div class="colour-palette-container box" data-aos="fade-up">
 								<?php
 								while(have_rows('colour_palette')){
 									the_row();
 									$hex_code = get_sub_field('hex_code');
 									$colour_image = get_sub_field('colour_circle');
 									?>
-										<div class="each-palette">
+										<div class="each-palette box" data-aos="fade-up">
 											<p class="hex"><?php echo $hex_code; ?></p>
 											<img class="colour-circle" src="<?php echo $colour_image ?>"></img>
 										</div><!-- .each-palette -->
@@ -173,7 +173,7 @@
 					} // end of while loop
 					?>
 					
-					<div class="related-work">
+					<div class="related-work box" data-aos="fade-up">
 						<div class="previous">
 						<?php
 						// display previous post link and font awesome arrow if previous post exists

@@ -21,7 +21,7 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				?>
-				<div class="project-container">
+				<div class="project-container box" data-aos="fade-up">
 					<div class="image-container">
 						<?php
 						the_post();

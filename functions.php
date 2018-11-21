@@ -140,6 +140,10 @@ function haenalee_scripts() {
 
 	wp_enqueue_script( 'haenalee-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'haenalee-animate-on-scroll', get_template_directory_uri(). '/js/aos.js', array(), '20181120', true );
+
+	wp_enqueue_style( 'haenalee-animate-on-scroll-style', get_template_directory_uri(). '/css/aos.css', array(), '20181120' );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

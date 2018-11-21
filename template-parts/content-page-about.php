@@ -48,7 +48,7 @@
 					while(have_rows('about_me')){
 						the_row();
 						?>
-						<div class="about-container">
+						<div class="about-container box" data-aos="fade-right">
 						<?php
 						// store each sub-field in a variable
 							$about_title = get_sub_field('about_title');
